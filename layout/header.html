@@ -1,10 +1,10 @@
 <header class="main-header" id="header">
     <div class="header-container">
 
-        <!-- LOGO HA MARCA -->
+        <!-- LOGO Y MARCA (IMAGEN OFICIAL) -->
         <a href="#inicio" class="brand-logo" data-module="inicio">
-            <div class="logo-icon-wrapper">
-                <i class="fa-solid fa-feather-pointed"></i>
+            <div class="logo-img-wrapper">
+                <img src="img/logo.png" alt="Logo MISKI SATI" class="header-logo-img">
             </div>
             <div class="logo-text-group">
                 <span class="brand-name">MISKI SATI</span>
@@ -12,9 +12,9 @@
             </div>
         </a>
 
-        <!-- NAVEGACIÓN DESKTOP (4 OPCIÓN AÑÓNTE OJEHECHA) -->
+        <!-- NAVEGACIÓN DESKTOP (4 OPCIONES A LA VISTA) -->
         <div class="nav-scroll-wrapper">
-            <button class="nav-arrow-btn prev" id="navPrevBtn" aria-label="Asoi asu gotyo">
+            <button class="nav-arrow-btn prev" id="navPrevBtn" aria-label="Anterior">
                 <i class="fa-solid fa-chevron-left"></i>
             </button>
 
@@ -73,17 +73,17 @@
                 </ul>
             </nav>
 
-            <button class="nav-arrow-btn next" id="navNextBtn" aria-label="Asoi akatúa gotyo">
+            <button class="nav-arrow-btn next" id="navNextBtn" aria-label="Siguiente">
                 <i class="fa-solid fa-chevron-right"></i>
             </button>
         </div>
 
-        <!-- ACCIONES HA BOTÓN HAMBURGUESA -->
+        <!-- ACCIONES Y BOTÓN DE MENÚ MÓVIL -->
         <div class="header-actions">
-            <a href="https://wa.me/51987654321" target="_blank" class="btn-header-reserve">
+            <button class="btn-header-reserve" id="openHeaderWhatsappModalBtn">
                 <i class="fa-brands fa-whatsapp"></i> Reservar
-            </a>
-            <button class="mobile-toggle-btn" id="mobileToggleBtn" aria-label="Ikepe menú">
+            </button>
+            <button class="mobile-toggle-btn" id="mobileToggleBtn" aria-label="Abrir menú">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
@@ -93,8 +93,13 @@
     <!-- MENÚ MÓVIL FULLSCREEN -->
     <div class="mobile-nav-drawer" id="mobileNavDrawer">
         <div class="mobile-drawer-header">
-            <span class="brand-name">MISKI SATI S.A.C.</span>
-            <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Mboty menú">
+            <div class="brand-logo">
+                <div class="logo-img-wrapper">
+                    <img src="img/logo.png" alt="Logo MISKI SATI" class="header-logo-img">
+                </div>
+                <span class="brand-name">MISKI SATI S.A.C.</span>
+            </div>
+            <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Cerrar menú">
                 <i class="fa-solid fa-xmark"></i>
             </button>
         </div>
@@ -149,6 +154,12 @@
                 <a href="#propuestas-mejora" class="mobile-link" data-module="propuestas-mejora">
                     <i class="fa-solid fa-chart-line"></i> Propuestas de mejora
                 </a>
+            </li>
+            <li style="margin-top: 1rem;">
+                <button class="btn-header-reserve" id="openMobileWhatsappModalBtn"
+                    style="width: 100%; justify-content: center; padding: 0.8rem;">
+                    <i class="fa-brands fa-whatsapp"></i> Reservar vía WhatsApp
+                </button>
             </li>
         </ul>
 
