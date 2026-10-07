@@ -46,8 +46,8 @@
   justify-content: center;
   padding: 6rem 1.5rem 8rem;
   background:
-    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.8)),
-    url("https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1600&q=80")
+    linear-gradient(rgba(0, 0, 0, 0.226), rgba(0, 0, 0, 0.217)),
+    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSan4XuC6dL7PX-uwcaBBYm7o3hCPuXRa1Txt2jqRaceA&s=10")
       center/cover no-repeat;
   color: #ffffff;
 }
