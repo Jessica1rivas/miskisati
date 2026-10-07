@@ -29,12 +29,12 @@ const routes = {
     css: "modules/imagen-institucional/institucional.css",
     js: "modules/imagen-institucional/institucional.js",
   },
-  "aplicaciones": {
+  aplicaciones: {
     html: "modules/aplicaciones/aplicaciones.html",
     css: "modules/aplicaciones/aplicaciones.css",
     js: "modules/aplicaciones/aplicaciones.js",
   },
-  "comunicacion": {
+  comunicacion: {
     html: "modules/comunicacion/comunicacion.html",
     css: "modules/comunicacion/comunicacion.css",
     js: "modules/comunicacion/comunicacion.js",
@@ -53,7 +53,7 @@ const routes = {
 
 let scrollObserver = null;
 
-// Visits counter logic
+// Lógica para el contador de visitas
 function initVisitsCounter() {
   const BASE_DAILY = 100;
   const BASE_WEEKLY = 700;
@@ -91,7 +91,7 @@ function initVisitsCounter() {
   if (totalEl) totalEl.textContent = stats.total;
 }
 
-// Scroll observer for reveal animation
+// Observer para animaciones de entrada al hacer scroll
 function initScrollObserver() {
   const observerOptions = {
     root: null,
@@ -118,7 +118,7 @@ function observeScrollElements() {
   elements.forEach((el) => scrollObserver.observe(el));
 }
 
-// Load Header and Footer Layout
+// Cargar el Header y Footer
 async function loadLayout() {
   try {
     const [headerRes, footerRes] = await Promise.all([
@@ -144,10 +144,10 @@ async function loadLayout() {
   }
 }
 
-// Global Events and Arrow Navigation Logic
+// Eventos globales para navegación
 function setupGlobalEvents() {
   document.addEventListener("click", (e) => {
-    // Modular navigation with data-module
+    // Navegación modular por data-module
     const targetBtn = e.target.closest("[data-module]");
     if (targetBtn) {
       const moduleName = targetBtn.dataset.module;
@@ -155,17 +155,16 @@ function setupGlobalEvents() {
       closeMobileMenu();
     }
 
-    // Open mobile menu
+    // Menú móvil
     if (e.target.closest("#mobileToggleBtn")) {
       openMobileMenu();
     }
 
-    // Close mobile menu
     if (e.target.closest("#mobileCloseBtn")) {
       closeMobileMenu();
     }
 
-    // Arrow buttons logic (< and >)
+    // Flechas de desplazamiento del menú (< y >)
     const prevBtn = e.target.closest("#navPrevBtn");
     const nextBtn = e.target.closest("#navNextBtn");
     const mainNav = document.getElementById("mainNav");
@@ -197,13 +196,11 @@ function closeMobileMenu() {
   }
 }
 
-// Active Nav Link Update
 function updateActiveNavLink(currentRoute) {
   const buttons = document.querySelectorAll("[data-module]");
   buttons.forEach((btn) => {
     if (btn.dataset.module === currentRoute) {
       btn.classList.add("active");
-      // Auto-scroll inside navigation to show active item
       if (btn.classList.contains("nav-link")) {
         btn.scrollIntoView({
           behavior: "smooth",
@@ -217,7 +214,7 @@ function updateActiveNavLink(currentRoute) {
   });
 }
 
-// Dynamic Module Navigation
+// Navegación dinámicas entre módulos
 async function navigateTo(routeKey) {
   const validRouteKey = routes[routeKey] ? routeKey : "inicio";
   const route = routes[validRouteKey];
@@ -270,7 +267,7 @@ function handleHashChange() {
   navigateTo(routeKey);
 }
 
-// App Initialization
+// Inicialización de la SPA
 window.addEventListener("DOMContentLoaded", async () => {
   initScrollObserver();
   await loadLayout();
