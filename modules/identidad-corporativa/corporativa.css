@@ -34,8 +34,8 @@
   position: relative;
   min-height: 80vh;
   background:
-    linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.88)),
-    url("https://images.unsplash.com/photo-1511497584788-8767611136f6?auto=format&fit=crop&w=1600&q=80")
+    linear-gradient(rgba(0, 0, 0, 0.183), rgba(0, 0, 0, 0.265)),
+    url("../../img/indentidad_corporativa.jfif")
       center/cover no-repeat;
   color: var(--bw-white);
   display: flex;
