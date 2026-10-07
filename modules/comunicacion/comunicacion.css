@@ -36,8 +36,8 @@
 .com-hero {
   position: relative;
   min-height: 80vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.82)),
-    url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.158), rgba(0, 0, 0, 0.148)),
+    url("../../img/comunicacion.jfif") center/cover no-repeat;
   color: var(--com-white);
   display: flex;
   align-items: center;
