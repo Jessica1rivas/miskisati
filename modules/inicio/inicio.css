@@ -46,8 +46,8 @@
   justify-content: center;
   padding: 6rem 1.5rem 8rem;
   background:
-    linear-gradient(rgba(0, 0, 0, 0.226), rgba(0, 0, 0, 0.217)),
-    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSan4XuC6dL7PX-uwcaBBYm7o3hCPuXRa1Txt2jqRaceA&s=10")
+    linear-gradient(rgba(0, 0, 0, 0.084), rgba(0, 0, 0, 0.114)),
+    url("../../img/comida_inicio.jfif")
       center/cover no-repeat;
   color: #ffffff;
 }
