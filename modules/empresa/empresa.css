@@ -35,8 +35,8 @@
   min-height: 90vh;
   /* Imagen de fondo de alta resolución de la selva/bosque */
   background:
-    linear-gradient(rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.203)),
-    url("../../img/logo.png")
+    linear-gradient(rgba(0, 0, 0, 0.089), rgba(0, 0, 0, 0.249)),
+    url("../../img/logo_2.jfif")
       center/cover no-repeat;
   color: var(--bw-white);
   display: flex;
