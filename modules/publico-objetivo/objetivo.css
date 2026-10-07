@@ -34,8 +34,8 @@
   position: relative;
   min-height: 85vh;
   background:
-    linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.88)),
-    url("https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1600&q=80")
+    linear-gradient(rgba(0, 0, 0, 0.217), rgba(0, 0, 0, 0.135)),
+    url("../../img/publico_objetivo.jfif")
       center/cover no-repeat;
   color: var(--bw-white);
   display: flex;
