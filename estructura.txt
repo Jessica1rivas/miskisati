@@ -1,0 +1,30 @@
+JESSICA/
+|_ img/
+|   |_ ... imagenes por monton
+|_ modules/
+|   |_ inicio/
+|   |   |_ inicio.html
+|   |   |_ inicio.css
+|   |   |_ inicio.js
+|   |_ empresa/
+|   |   |_ empresa.html
+|   |   |_ empresa.css
+|   |   |_ empresa.js
+|   |_ visual/
+|   |   |_ visual.html
+|   |   |_ visual.css
+|   |   |_ visual.js
+|   |_ objetivo_publico/
+|   |   |_ objetivo.html
+|   |   |_ objetivo.css
+|   |   |_ objetivo.js
+|   |  
+|   |_ ... mas modulos
+|   
+|_ layout/
+|   |_ header.html
+|   |_ footer.html
+|
+|_ index.html
+|_ global.css
+|_ main.js

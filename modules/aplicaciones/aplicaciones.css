@@ -1,0 +1,451 @@
+/* ==========================================================
+   ESTILOS EXCLUSIVOS: MÓDULO APLICACIONES CORPORATIVAS (MISKI SATI)
+   Sin desbordamientos ni doble scrollbar
+   ========================================================== */
+
+:root {
+  --appscorp-black: #000000;
+  --appscorp-dark: #121212;
+  --appscorp-gray-dark: #262626;
+  --appscorp-gray-mid: #666666;
+  --appscorp-gray-light: #e0e0e0;
+  --appscorp-panel: #f9f9f9;
+  --appscorp-white: #ffffff;
+  --appscorp-shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.06);
+  --appscorp-shadow-md: 0 10px 25px rgba(0, 0, 0, 0.12);
+  --appscorp-shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.22);
+  --appscorp-transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --appscorp-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* RESET DE CONTENEDOR - SIN OVERFLOW QUE GENERE DOBLE SCROLL */
+.appscorp-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  font-family: var(--appscorp-font);
+  color: var(--appscorp-black);
+  background-color: var(--appscorp-white);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* HERO SECTION */
+.appscorp-hero {
+  position: relative;
+  min-height: 80vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.82)),
+    url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+  color: var(--appscorp-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 1.5rem 7rem;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.appscorp-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.75) 100%);
+  z-index: 1;
+}
+
+.appscorp-wave {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.appscorp-wave-top { top: 0; }
+.appscorp-wave-bottom { bottom: 0; }
+
+.appscorp-wave svg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 60px;
+}
+
+.appscorp-wave-path {
+  animation: appscorpWaveMove 8s ease-in-out infinite alternate;
+}
+
+@keyframes appscorpWaveMove {
+  0% { d: path("M0,0 C300,90 600,10 900,80 C1050,115 1150,40 1200,60 L1200,120 L0,120 Z"); }
+  100% { d: path("M0,0 C350,40 550,100 850,30 C1000,80 1120,20 1200,50 L1200,120 L0,120 Z"); }
+}
+
+.appscorp-hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 920px;
+  width: 100%;
+}
+
+.appscorp-logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.8rem;
+}
+
+.appscorp-logo-ring {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+  transition: var(--appscorp-transition);
+}
+
+.floating-appscorp-logo {
+  animation: floatAppscorpLogo 4s ease-in-out infinite;
+}
+
+@keyframes floatAppscorpLogo {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+.appscorp-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.appscorp-logo-caption {
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  color: var(--appscorp-white);
+  text-transform: uppercase;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.appscorp-hero-title {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 900;
+  margin-bottom: 0.6rem;
+  letter-spacing: -1.5px;
+}
+
+.appscorp-hero-slogan {
+  font-size: clamp(1.1rem, 2.3vw, 1.4rem);
+  font-style: italic;
+  color: var(--appscorp-gray-light);
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.appscorp-hero-badges {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.appscorp-badge {
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--appscorp-white);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+}
+
+.appscorp-hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.appscorp-btn {
+  padding: 0.85rem 1.8rem;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: var(--appscorp-transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  border: none;
+}
+
+.appscorp-btn-primary {
+  background: var(--appscorp-white);
+  color: var(--appscorp-black);
+}
+
+.appscorp-btn-primary:hover {
+  background: var(--appscorp-gray-light);
+  transform: translateY(-3px);
+}
+
+.appscorp-btn-outline {
+  background: rgba(255, 255, 255, 0.22);
+  color: var(--appscorp-white);
+  backdrop-filter: blur(8px);
+}
+
+.appscorp-btn-outline:hover {
+  background: var(--appscorp-white);
+  color: var(--appscorp-black);
+  transform: translateY(-3px);
+}
+
+/* SECCIONES Y CONTENEDORES */
+.appscorp-section {
+  padding: 1rem 1.5rem;
+  max-width: 1150px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.appscorp-bg-panel {
+  background: var(--appscorp-panel);
+  padding: 3.5rem 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--appscorp-gray-light);
+}
+
+.text-center { text-align: center; }
+
+.appscorp-tag {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  color: var(--appscorp-gray-mid);
+  display: block;
+}
+
+.appscorp-section-title {
+  font-size: 2.1rem;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+
+.appscorp-title-underline {
+  height: 3px;
+  width: 55px;
+  background: var(--appscorp-black);
+  margin: 0.8rem auto 0;
+  border-radius: 2px;
+}
+
+.appscorp-section-intro {
+  max-width: 780px;
+  margin: 1.2rem auto 0;
+  font-size: 1rem;
+  color: var(--appscorp-gray-dark);
+  line-height: 1.6;
+}
+
+/* CONTENEDOR DE IMÁGENES SIN CORTES (OBJECT-FIT CONTAIN) */
+.appscorp-contain-frame {
+  background: #ffffff !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.appscorp-fit-contain {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+/* APLICACIONES GRID */
+.appscorp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.appscorp-card {
+  background: var(--appscorp-white);
+  border: 1px solid var(--appscorp-gray-light);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--appscorp-shadow-sm);
+  transition: var(--appscorp-transition);
+  box-sizing: border-box;
+}
+
+.appscorp-card:hover {
+  border-color: var(--appscorp-black);
+  transform: translateY(-5px);
+  box-shadow: var(--appscorp-shadow-md);
+}
+
+.appscorp-card-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--appscorp-black);
+  color: var(--appscorp-white);
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  z-index: 2;
+  letter-spacing: 0.5px;
+}
+
+.appscorp-img-box {
+  width: 100%;
+  height: 230px;
+  background: #ffffff;
+}
+
+.appscorp-zoom-img {
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.appscorp-zoom-img:hover {
+  transform: scale(1.04);
+}
+
+.appscorp-card-info {
+  padding: 1.2rem;
+}
+
+.appscorp-card-info h4 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+}
+
+.appscorp-card-info p {
+  font-size: 0.85rem;
+  color: var(--appscorp-gray-dark);
+  line-height: 1.5;
+}
+
+/* ESTÁNDARES GRID */
+.appscorp-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+  margin-top: 2.2rem;
+}
+
+.spec-card {
+  background: var(--appscorp-white);
+  border: 1px solid var(--appscorp-black);
+  border-radius: 6px;
+  padding: 1.8rem;
+  box-shadow: var(--appscorp-shadow-sm);
+  transition: var(--appscorp-transition);
+  box-sizing: border-box;
+}
+
+.spec-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--appscorp-shadow-md);
+}
+
+.spec-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--appscorp-black);
+  color: var(--appscorp-white);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.spec-card h4 { font-size: 1.1rem; font-weight: 800; margin-bottom: 0.4rem; }
+.spec-card p { font-size: 0.88rem; color: var(--appscorp-gray-dark); line-height: 1.5; }
+
+/* LIGHTBOX MODAL */
+.appscorp-lightbox-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(5px);
+}
+
+.appscorp-modal-content {
+  margin: auto;
+  display: block;
+  max-width: 85%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.appscorp-modal-caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+}
+
+.appscorp-modal-close {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* SCROLL OBSERVER ANIMACIONES */
+.animate-on-scroll {
+  opacity: 0;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
+}
+
+.animate-on-scroll[data-animation="fade-up"] { transform: translateY(30px); }
+.animate-on-scroll[data-animation="fade-down"] { transform: translateY(-30px); }
+.animate-on-scroll[data-animation="slide-right"] { transform: translateX(-40px); }
+.animate-on-scroll[data-animation="slide-left"] { transform: translateX(40px); }
+.animate-on-scroll[data-animation="zoom-in"] { transform: scale(0.9); }
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}
+
+@media (max-width: 600px) {
+  .appscorp-hero { padding-top: 4rem; min-height: 70vh; }
+}
