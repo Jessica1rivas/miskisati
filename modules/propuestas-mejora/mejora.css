@@ -1,0 +1,667 @@
+/* ==========================================================
+   ESTILOS EXCLUSIVOS MÓDULO PROPUESTAS DE MEJORA (.prop-mejora-container)
+   ========================================================== */
+
+.prop-mejora-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  font-family: var(--font-sans, "Segoe UI", system-ui, sans-serif);
+  color: #2c2c2c;
+  background-color: var(--bg-main, #f9f6f0);
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* --- HERO SECTION --- */
+.prop-mejora-container .prop-hero {
+  position: relative;
+  min-height: 85vh;
+  background:
+    linear-gradient(rgba(27, 77, 46, 0.75), rgba(0, 0, 0, 0.85)),
+    url("../../img/propuesta.jfif") center/cover no-repeat;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 1.5rem 8rem;
+  overflow: hidden;
+  text-align: center;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.prop-mejora-container .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(27, 77, 46, 0.3) 0%,
+    rgba(0, 0, 0, 0.88) 100%
+  );
+  z-index: 1;
+}
+
+.prop-mejora-container .wave-shape {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+}
+
+.prop-mejora-container .wave-top {
+  top: 0;
+}
+.prop-mejora-container .wave-bottom {
+  bottom: 0;
+}
+
+.prop-mejora-container .wave-shape svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 70px;
+}
+
+.prop-mejora-container .wave-path {
+  animation: propWaveMove 8s ease-in-out infinite alternate;
+}
+
+@keyframes propWaveMove {
+  0% {
+    d: path(
+      "M0,0 C300,90 600,10 900,80 C1050,115 1150,40 1200,60 L1200,120 L0,120 Z"
+    );
+  }
+  100% {
+    d: path(
+      "M0,0 C350,40 550,100 850,30 C1000,80 1120,20 1200,50 L1200,120 L0,120 Z"
+    );
+  }
+}
+
+.prop-mejora-container .hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 920px;
+}
+
+.prop-mejora-container .hero-logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.prop-mejora-container .logo-ring-badge {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  padding: 6px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+.prop-mejora-container .floating-logo {
+  animation: propFloat 4s ease-in-out infinite;
+}
+
+@keyframes propFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+.prop-mejora-container .hero-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.prop-mejora-container .logo-caption {
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #a2e048;
+  text-transform: uppercase;
+}
+
+.prop-mejora-container .prop-title {
+  font-family: "Georgia", serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.prop-mejora-container .prop-slogan {
+  font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+  font-style: italic;
+  color: #f9f6f0;
+  margin-bottom: 1.8rem;
+  font-weight: 300;
+}
+
+.prop-mejora-container .hero-keywords {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.2rem;
+}
+
+.prop-mejora-container .kw-tag {
+  padding: 0.45rem 1.1rem;
+  border-radius: 25px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.prop-mejora-container .hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.prop-mejora-container .btn {
+  padding: 0.85rem 2rem;
+  border-radius: 35px;
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  border: none;
+}
+
+.prop-mejora-container .btn-hero-primary {
+  background-color: #e53935;
+  color: #ffffff;
+  box-shadow: 0 8px 22px rgba(229, 57, 53, 0.35);
+}
+
+.prop-mejora-container .btn-hero-primary:hover {
+  background-color: #c62828;
+  transform: translateY(-3px);
+}
+
+.prop-mejora-container .btn-hero-outline {
+  background: rgba(27, 77, 46, 0.85);
+  color: #ffffff;
+  border: 2px solid #1b4d2e;
+  backdrop-filter: blur(8px);
+}
+
+.prop-mejora-container .btn-hero-outline:hover {
+  background-color: #1b4d2e;
+  transform: translateY(-3px);
+}
+
+.prop-mejora-container .btn-highlight {
+  background-color: #daa520;
+  color: #1b4d2e;
+  font-weight: 900;
+}
+
+.prop-mejora-container .btn-highlight:hover {
+  background-color: #b8860b;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* --- SECCIONES Y CONTENEDORES --- */
+.prop-mejora-container .section-block {
+  padding: 1rem 1.5rem;
+  max-width: 1140px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.prop-mejora-container .bg-panel-curved {
+  background-color: #ffffff;
+  padding: 3.2rem 2rem;
+  border-radius: 45px;
+  border: 1px solid #ece8df;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.03);
+}
+
+.prop-mejora-container .text-center {
+  text-align: center;
+}
+
+.prop-mejora-container .section-tag {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #e53935;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.prop-mejora-container .section-title {
+  font-family: "Georgia", serif;
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #1b4d2e;
+}
+
+.prop-mejora-container .title-underline {
+  height: 4px;
+  width: 55px;
+  background: #e53935;
+  margin: 0.8rem auto 0;
+  border-radius: 10px;
+}
+
+.prop-mejora-container .summary-card {
+  background: #ffffff;
+  border: 1px solid #ece8df;
+  border-radius: 28px;
+  padding: 1.5rem 1.8rem;
+  margin: 1.8rem auto;
+  max-width: 900px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+}
+
+.prop-mejora-container .card-subtitle {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #1b4d2e;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.prop-mejora-container .section-description {
+  font-size: 0.95rem;
+  color: #444444;
+  line-height: 1.6;
+}
+
+.prop-mejora-container .keywords-bar {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.prop-mejora-container .kw-pill {
+  font-size: 0.72rem;
+  font-weight: 800;
+  background: #f9f6f0;
+  color: #1b4d2e;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  border: 1px solid #ece8df;
+}
+
+/* --- TABLAS RESPONSIVAS --- */
+.prop-mejora-container .table-responsive-wrapper {
+  overflow-x: auto;
+  margin-top: 1.5rem;
+  background: #ffffff;
+  border-radius: 25px;
+  border: 1px solid #ece8df;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.prop-mejora-container .prop-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.prop-mejora-container .prop-data-table th {
+  background-color: #1b4d2e;
+  color: #ffffff;
+  padding: 1rem 1.2rem;
+  font-weight: 800;
+}
+
+.prop-mejora-container .prop-data-table td {
+  padding: 0.9rem 1.2rem;
+  border-bottom: 1px solid #ece8df;
+  color: #444444;
+}
+
+/* --- GRID DE PILARES DE INNOVACIÓN --- */
+.prop-mejora-container .pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+  margin-top: 2rem;
+}
+
+.prop-mejora-container .pillar-card {
+  background: #ffffff;
+  border: 1px solid #ece8df;
+  border-radius: 30px;
+  padding: 1.8rem;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.prop-mejora-container .pillar-card:hover {
+  transform: translateY(-8px);
+  border-color: #1b4d2e;
+}
+
+.prop-mejora-container .pillar-num {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #ece8df;
+}
+
+.prop-mejora-container .pillar-icon {
+  width: 50px;
+  height: 50px;
+  background: #1b4d2e;
+  color: #ffffff;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+}
+
+.prop-mejora-container .pillar-card h4 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #1b4d2e;
+  margin-bottom: 0.5rem;
+}
+
+.prop-mejora-container .pillar-desc {
+  font-size: 0.88rem;
+  color: #555555;
+  line-height: 1.5;
+}
+
+.prop-mejora-container .pillar-kw {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #e53935;
+  margin-top: auto;
+  padding-top: 0.8rem;
+}
+
+/* --- GALERÍA DE IMPLEMENTACIÓN --- */
+.prop-mejora-container .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.prop-mejora-container .gallery-card {
+  background: #ffffff;
+  border: 1px solid #ece8df;
+  border-radius: 35px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.prop-mejora-container .gallery-card:hover {
+  transform: translateY(-8px);
+  border-color: #1b4d2e;
+}
+
+.prop-mejora-container .gallery-img-frame {
+  height: 230px;
+  background: #f9f6f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.prop-mejora-container .gallery-img-frame img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.prop-mejora-container .gallery-card:hover .gallery-img-frame img {
+  transform: scale(1.06);
+}
+
+.prop-mejora-container .gallery-info {
+  padding: 1.5rem;
+}
+
+.prop-mejora-container .gallery-info h4 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #1b4d2e;
+  margin-bottom: 0.4rem;
+}
+
+.prop-mejora-container .gallery-desc {
+  font-size: 0.85rem;
+  color: #555555;
+  line-height: 1.5;
+}
+
+.prop-mejora-container .gallery-kw {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #e53935;
+  margin-top: 0.6rem;
+}
+
+/* --- METRICAS Y KPIS --- */
+.prop-mejora-container .kpi-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.prop-mejora-container .kpi-metric-card {
+  background: #f9f6f0;
+  border: 1px solid #ece8df;
+  border-radius: 28px;
+  padding: 1.8rem 1.2rem;
+  text-align: center;
+}
+
+.prop-mejora-container .kpi-number {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #e53935;
+  display: block;
+}
+
+.prop-mejora-container .kpi-metric-card h4 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #1b4d2e;
+  margin: 0.3rem 0;
+}
+
+.prop-mejora-container .kpi-metric-card p {
+  font-size: 0.8rem;
+  color: #555555;
+  line-height: 1.4;
+}
+
+/* --- BLOQUE DE CIERRE ESPECIAL DEL PROYECTO --- */
+.prop-mejora-container .closing-special-block {
+  margin-top: 2rem;
+}
+
+.prop-mejora-container .closing-card {
+  background: linear-gradient(135deg, #1b4d2e 0%, #0f2d1b 100%);
+  border-radius: 40px;
+  padding: 3.5rem 2rem;
+  color: #ffffff;
+  box-shadow: 0 15px 40px rgba(27, 77, 46, 0.3);
+  max-width: 850px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.prop-mejora-container .closing-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  background: #daa520;
+  color: #1b4d2e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  margin: 0 auto 1.2rem;
+  box-shadow: 0 8px 20px rgba(218, 165, 32, 0.4);
+}
+
+.prop-mejora-container .closing-title {
+  font-family: "Georgia", serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.prop-mejora-container .closing-desc {
+  font-size: 1rem;
+  color: #e8f5e9;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 1.2rem auto;
+}
+
+.prop-mejora-container .closing-quote {
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: 700;
+  color: #a2e048;
+  margin: 1.5rem 0;
+}
+
+.prop-mejora-container .closing-badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* --- LIGHTBOX MODAL --- */
+.prop-mejora-container .prop-lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.prop-mejora-container .prop-lightbox-img {
+  max-width: 90%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+.prop-mejora-container .prop-caption {
+  margin-top: 1rem;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.prop-mejora-container .prop-close-btn {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+/* --- ANIMACIONES OBSERVER --- */
+.prop-mejora-container .animate-on-scroll {
+  opacity: 0;
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+  will-change: opacity, transform;
+}
+
+.prop-mejora-container .animate-on-scroll[data-animation="fade-up"] {
+  transform: translateY(40px);
+}
+.prop-mejora-container .animate-on-scroll[data-animation="fade-down"] {
+  transform: translateY(-40px);
+}
+.prop-mejora-container .animate-on-scroll[data-animation="slide-right"] {
+  transform: translateX(-40px);
+}
+.prop-mejora-container .animate-on-scroll[data-animation="slide-left"] {
+  transform: translateX(40px);
+}
+.prop-mejora-container .animate-on-scroll[data-animation="zoom-in"] {
+  transform: scale(0.9);
+}
+
+.prop-mejora-container .animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}
+
+@media (max-width: 768px) {
+  .prop-mejora-container .prop-hero {
+    min-height: 75vh;
+    padding-top: 5rem;
+  }
+  .prop-mejora-container .closing-card {
+    padding: 2.5rem 1.2rem;
+  }
+}

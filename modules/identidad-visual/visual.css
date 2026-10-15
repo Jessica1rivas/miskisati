@@ -1,0 +1,672 @@
+/* ==========================================================
+   ESTILOS EXCLUSIVOS MÓDULO IDENTIDAD VISUAL (.identidad-visual-container)
+   ========================================================== */
+
+.identidad-visual-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  font-family: var(--font-sans, "Segoe UI", system-ui, sans-serif);
+  color: #2c2c2c;
+  background-color: var(--bg-main, #f9f6f0);
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* --- HERO SECTION --- */
+.identidad-visual-container .idvis-hero {
+  position: relative;
+  min-height: 85vh;
+  background:
+    linear-gradient(rgba(27, 77, 46, 0.7), rgba(0, 0, 0, 0.8)),
+    url("../../img/indentidad_visual.jfif") center/cover no-repeat;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 1.5rem 8rem;
+  overflow: hidden;
+  text-align: center;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.identidad-visual-container .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(27, 77, 46, 0.3) 0%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  z-index: 1;
+}
+
+.identidad-visual-container .wave-shape {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+}
+
+.identidad-visual-container .wave-top {
+  top: 0;
+}
+.identidad-visual-container .wave-bottom {
+  bottom: 0;
+}
+
+.identidad-visual-container .wave-shape svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 70px;
+}
+
+.identidad-visual-container .wave-path {
+  animation: idvisWaveMove 8s ease-in-out infinite alternate;
+}
+
+@keyframes idvisWaveMove {
+  0% {
+    d: path(
+      "M0,0 C300,90 600,10 900,80 C1050,115 1150,40 1200,60 L1200,120 L0,120 Z"
+    );
+  }
+  100% {
+    d: path(
+      "M0,0 C350,40 550,100 850,30 C1000,80 1120,20 1200,50 L1200,120 L0,120 Z"
+    );
+  }
+}
+
+.identidad-visual-container .hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 900px;
+}
+
+.identidad-visual-container .hero-logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.identidad-visual-container .logo-ring-badge {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  padding: 6px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+  transition: all 0.35s ease;
+}
+
+.identidad-visual-container .floating-logo {
+  animation: idvisFloat 4s ease-in-out infinite;
+}
+
+@keyframes idvisFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+.identidad-visual-container .hero-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.identidad-visual-container .logo-caption {
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #a2e048;
+  text-transform: uppercase;
+}
+
+.identidad-visual-container .idvis-title {
+  font-family: "Georgia", serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.identidad-visual-container .idvis-slogan {
+  font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+  font-style: italic;
+  color: #f9f6f0;
+  margin-bottom: 1.8rem;
+  font-weight: 300;
+}
+
+.identidad-visual-container .hero-badges {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.2rem;
+}
+
+.identidad-visual-container .badge {
+  padding: 0.55rem 1.3rem;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all 0.3s ease;
+}
+
+.identidad-visual-container .badge:hover {
+  background: #ffffff;
+  color: #1b4d2e;
+  transform: translateY(-2px);
+}
+
+.identidad-visual-container .hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.identidad-visual-container .btn {
+  padding: 0.9rem 2.2rem;
+  border-radius: 35px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  border: none;
+}
+
+.identidad-visual-container .btn-hero-primary {
+  background-color: #e53935;
+  color: #ffffff;
+  box-shadow: 0 8px 22px rgba(229, 57, 53, 0.35);
+}
+
+.identidad-visual-container .btn-hero-primary:hover {
+  background-color: #c62828;
+  transform: translateY(-3px);
+}
+
+.identidad-visual-container .btn-hero-outline {
+  background: rgba(27, 77, 46, 0.85);
+  color: #ffffff;
+  border: 2px solid #1b4d2e;
+  backdrop-filter: blur(8px);
+}
+
+.identidad-visual-container .btn-hero-outline:hover {
+  background-color: #1b4d2e;
+  transform: translateY(-3px);
+}
+
+/* --- SECCIONES GENERALES --- */
+.identidad-visual-container .section-block {
+  padding: 1rem 1.5rem;
+  max-width: 1140px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.identidad-visual-container .bg-panel-curved {
+  background-color: #ffffff;
+  padding: 3.5rem 2.2rem;
+  border-radius: 45px;
+  border: 1px solid #ece8df;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.03);
+}
+
+.identidad-visual-container .text-center {
+  text-align: center;
+}
+
+.identidad-visual-container .section-tag {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #e53935;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.identidad-visual-container .section-title {
+  font-family: "Georgia", serif;
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #1b4d2e;
+}
+
+.identidad-visual-container .section-intro {
+  max-width: 800px;
+  margin: 1.2rem auto 0;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #555555;
+}
+
+.identidad-visual-container .title-underline {
+  height: 4px;
+  width: 55px;
+  background: #e53935;
+  margin: 0.8rem auto 0;
+  border-radius: 10px;
+}
+
+/* --- 1. ISOLOGO & BOCETOS LAYOUT --- */
+.identidad-visual-container .logo-showcase-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  margin-top: 2.2rem;
+  align-items: center;
+}
+
+.identidad-visual-container .main-isologo-card {
+  background: #f9f6f0;
+  border: 1px solid #ece8df;
+  border-radius: 38px;
+  padding: 2.2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.identidad-visual-container .card-status-pill {
+  background: #1b4d2e;
+  color: #ffffff;
+  padding: 0.4rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.identidad-visual-container .isologo-img-frame {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  border: 1px solid #ece8df;
+}
+
+.identidad-visual-container .isologo-img-frame img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.identidad-visual-container .isologo-img-frame img:hover {
+  transform: scale(1.05);
+}
+
+.identidad-visual-container .isologo-text-details h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #1b4d2e;
+  margin-bottom: 0.4rem;
+}
+
+.identidad-visual-container .isologo-text-details p {
+  font-size: 0.9rem;
+  color: #555555;
+  line-height: 1.55;
+}
+
+.identidad-visual-container .sketches-mosaic-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.identidad-visual-container .sketch-item-card {
+  background: #ffffff;
+  border: 1px solid #ece8df;
+  border-radius: 28px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease;
+}
+
+.identidad-visual-container .sketch-item-card:hover {
+  transform: translateY(-4px);
+  border-color: #1b4d2e;
+}
+
+.identidad-visual-container .sketch-img-box {
+  height: 130px;
+  background: #f9f6f0;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.6rem;
+}
+
+.identidad-visual-container .sketch-img-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.identidad-visual-container .sketch-img-box img:hover {
+  transform: scale(1.08);
+}
+
+.identidad-visual-container .sketch-item-card span {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #1b4d2e;
+  display: block;
+}
+
+/* --- 2. PALETA CROMÁTICA (CHIPS DE COLOR) --- */
+.identidad-visual-container .color-chips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.2rem;
+}
+
+.identidad-visual-container .color-chip-card {
+  background: #ffffff;
+  border: 1px solid #ece8df;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.03);
+  transition: transform 0.35s ease;
+}
+
+.identidad-visual-container .color-chip-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 32px rgba(0, 0, 0, 0.08);
+}
+
+.identidad-visual-container .chip-color-display {
+  height: 90px;
+  width: 100%;
+}
+
+.identidad-visual-container .chip-info {
+  padding: 1.2rem;
+}
+
+.identidad-visual-container .chip-info h4 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #1b4d2e;
+}
+
+.identidad-visual-container .hex-code {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #e53935;
+  display: block;
+}
+
+.identidad-visual-container .chip-info small {
+  font-size: 0.7rem;
+  color: #888888;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.identidad-visual-container .chip-info p {
+  font-size: 0.82rem;
+  color: #555555;
+  line-height: 1.4;
+}
+
+/* --- 3. TIPOGRAFÍA E ICONOGRAFÍA DUO --- */
+.identidad-visual-container .typo-graphic-duo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.identidad-visual-container .duo-card {
+  border-radius: 35px;
+  padding: 2.2rem;
+  border: 1px solid #ece8df;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease;
+}
+
+.identidad-visual-container .card-pink-soft {
+  background-color: #fadbd8;
+}
+.identidad-visual-container .card-green-soft {
+  background-color: #d5f5e3;
+}
+
+.identidad-visual-container .duo-card:hover {
+  transform: translateY(-6px);
+}
+
+.identidad-visual-container .duo-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.identidad-visual-container .duo-icon {
+  width: 48px;
+  height: 48px;
+  background: #1b4d2e;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.identidad-visual-container .duo-header h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1b4d2e;
+}
+
+.identidad-visual-container .duo-card p {
+  font-size: 0.92rem;
+  color: #444444;
+  line-height: 1.6;
+}
+
+/* --- 4. APLICACIONES Y MOCKUPS --- */
+.identidad-visual-container .mockups-curved-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2.2rem;
+}
+
+.identidad-visual-container .mockup-card {
+  background: #ffffff;
+  border: 1px solid #ece8df;
+  border-radius: 38px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.identidad-visual-container .mockup-card:hover {
+  transform: translateY(-8px);
+  border-color: #1b4d2e;
+  box-shadow: 0 18px 40px rgba(27, 77, 46, 0.12);
+}
+
+.identidad-visual-container .mockup-frame {
+  height: 220px;
+  width: 100%;
+  background: #f9f6f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.identidad-visual-container .mockup-frame img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.identidad-visual-container .mockup-card:hover .mockup-frame img {
+  transform: scale(1.06);
+}
+
+.identidad-visual-container .mockup-body {
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.identidad-visual-container .mockup-body h4 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #1b4d2e;
+}
+
+.identidad-visual-container .mockup-body p {
+  font-size: 0.88rem;
+  color: #555555;
+  line-height: 1.5;
+}
+
+/* --- LIGHTBOX MODAL --- */
+.identidad-visual-container .idvis-lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.identidad-visual-container .idvis-lightbox-img {
+  max-width: 90%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.identidad-visual-container .idvis-caption {
+  margin-top: 1rem;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.identidad-visual-container .idvis-close-btn {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+/* --- ANIMACIONES SCROLL REVEAL --- */
+.identidad-visual-container .animate-on-scroll {
+  opacity: 0;
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+  will-change: opacity, transform;
+}
+
+.identidad-visual-container .animate-on-scroll[data-animation="fade-up"] {
+  transform: translateY(40px);
+}
+.identidad-visual-container .animate-on-scroll[data-animation="fade-down"] {
+  transform: translateY(-40px);
+}
+.identidad-visual-container .animate-on-scroll[data-animation="slide-right"] {
+  transform: translateX(-40px);
+}
+.identidad-visual-container .animate-on-scroll[data-animation="slide-left"] {
+  transform: translateX(40px);
+}
+.identidad-visual-container .animate-on-scroll[data-animation="zoom-in"] {
+  transform: scale(0.9);
+}
+
+.identidad-visual-container .animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}
+
+/* RESPONSIVO */
+@media (max-width: 850px) {
+  .identidad-visual-container .idvis-hero {
+    min-height: 75vh;
+    padding-top: 5rem;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+  }
+  .identidad-visual-container .logo-ring-badge {
+    width: 140px;
+    height: 140px;
+  }
+  .identidad-visual-container .logo-showcase-layout {
+    grid-template-columns: 1fr;
+  }
+  .identidad-visual-container .bg-panel-curved {
+    padding: 2.2rem 1.2rem;
+    border-radius: 30px;
+  }
+}
