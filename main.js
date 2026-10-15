@@ -1,3 +1,7 @@
+/* ==========================================================
+   ENRUTADOR Y CONTROLADOR SPA - MISKI SATI S.A.C.
+   ========================================================== */
+
 const routes = {
   inicio: {
     html: "modules/inicio/inicio.html",
@@ -51,9 +55,65 @@ const routes = {
   },
 };
 
-let scrollObserver = null;
+// Cargar Layout Base (Header y Footer)
+async function loadLayout() {
+  try {
+    const [headerRes, footerRes] = await Promise.all([
+      fetch("layout/header.html"),
+      fetch("layout/footer.html"),
+    ]);
 
-// Lógica para el contador de visitas
+    if (headerRes.ok) {
+      document.getElementById("header-container").innerHTML =
+        await headerRes.text();
+    }
+    if (footerRes.ok) {
+      document.getElementById("footer-container").innerHTML =
+        await footerRes.text();
+    }
+
+    setupOffcanvasEvents();
+    initVisitsCounter();
+  } catch (err) {
+    console.error("Error al cargar el layout base:", err);
+  }
+}
+
+// Menú Off-Canvas Lateral (10 Módulos)
+function setupOffcanvasEvents() {
+  document.addEventListener("click", (e) => {
+    const burgerBtn = e.target.closest("#burgerToggleBtn");
+    const closeBtn = e.target.closest("#closeDrawerBtn");
+    const overlay = document.getElementById("offcanvasOverlay");
+    const drawer = document.getElementById("offcanvasDrawer");
+
+    if (burgerBtn && drawer && overlay) {
+      drawer.classList.add("active");
+      overlay.classList.add("active");
+      document.body.classList.add("no-scroll");
+    }
+
+    if ((closeBtn || e.target === overlay) && drawer && overlay) {
+      drawer.classList.remove("active");
+      overlay.classList.remove("active");
+      document.body.classList.remove("no-scroll");
+    }
+
+    const moduleLink = e.target.closest("[data-module]");
+    if (moduleLink) {
+      const moduleKey = moduleLink.dataset.module;
+      window.location.hash = moduleKey;
+
+      if (drawer && overlay) {
+        drawer.classList.remove("active");
+        overlay.classList.remove("active");
+        document.body.classList.remove("no-scroll");
+      }
+    }
+  });
+}
+
+// Contador de Visitas Persistente
 function initVisitsCounter() {
   const BASE_DAILY = 100;
   const BASE_WEEKLY = 700;
@@ -91,175 +151,51 @@ function initVisitsCounter() {
   if (totalEl) totalEl.textContent = stats.total;
 }
 
-// Observer para animaciones de entrada al hacer scroll
-function initScrollObserver() {
-  const observerOptions = {
-    root: null,
-    threshold: 0.1,
-    rootMargin: "0px 0px -30px 0px",
-  };
-
-  scrollObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("active");
-      } else {
-        entry.target.classList.remove("active");
-      }
-    });
-  }, observerOptions);
-
-  observeScrollElements();
-}
-
-function observeScrollElements() {
-  if (!scrollObserver) return;
-  const elements = document.querySelectorAll(".scroll-reveal");
-  elements.forEach((el) => scrollObserver.observe(el));
-}
-
-// Cargar el Header y Footer
-async function loadLayout() {
-  try {
-    const [headerRes, footerRes] = await Promise.all([
-      fetch("layout/header.html"),
-      fetch("layout/footer.html"),
-    ]);
-
-    if (headerRes.ok) {
-      const headerContainer = document.getElementById("header-container");
-      if (headerContainer) headerContainer.innerHTML = await headerRes.text();
-    }
-
-    if (footerRes.ok) {
-      const footerContainer = document.getElementById("footer-container");
-      if (footerContainer) footerContainer.innerHTML = await footerRes.text();
-    }
-
-    setupGlobalEvents();
-    observeScrollElements();
-    initVisitsCounter();
-  } catch (error) {
-    console.error("Error al cargar el layout:", error);
-  }
-}
-
-// Eventos globales para navegación
-function setupGlobalEvents() {
-  document.addEventListener("click", (e) => {
-    // Navegación modular por data-module
-    const targetBtn = e.target.closest("[data-module]");
-    if (targetBtn) {
-      const moduleName = targetBtn.dataset.module;
-      window.location.hash = moduleName;
-      closeMobileMenu();
-    }
-
-    // Menú móvil
-    if (e.target.closest("#mobileToggleBtn")) {
-      openMobileMenu();
-    }
-
-    if (e.target.closest("#mobileCloseBtn")) {
-      closeMobileMenu();
-    }
-
-    // Flechas de desplazamiento del menú (< y >)
-    const prevBtn = e.target.closest("#navPrevBtn");
-    const nextBtn = e.target.closest("#navNextBtn");
-    const mainNav = document.getElementById("mainNav");
-
-    if (mainNav) {
-      if (prevBtn) {
-        mainNav.scrollBy({ left: -160, behavior: "smooth" });
-      }
-      if (nextBtn) {
-        mainNav.scrollBy({ left: 160, behavior: "smooth" });
-      }
-    }
-  });
-}
-
-function openMobileMenu() {
-  const mobileNav = document.getElementById("mobileNavDrawer");
-  if (mobileNav) {
-    mobileNav.classList.add("open");
-    document.body.classList.add("no-scroll");
-  }
-}
-
-function closeMobileMenu() {
-  const mobileNav = document.getElementById("mobileNavDrawer");
-  if (mobileNav) {
-    mobileNav.classList.remove("open");
-    document.body.classList.remove("no-scroll");
-  }
-}
-
-function updateActiveNavLink(currentRoute) {
-  const buttons = document.querySelectorAll("[data-module]");
-  buttons.forEach((btn) => {
-    if (btn.dataset.module === currentRoute) {
-      btn.classList.add("active");
-      if (btn.classList.contains("nav-link")) {
-        btn.scrollIntoView({
-          behavior: "smooth",
-          inline: "center",
-          block: "nearest",
-        });
-      }
-    } else {
-      btn.classList.remove("active");
-    }
-  });
-}
-
-// Navegación dinámicas entre módulos
+// Enrutador Dinámico entre Módulos
 async function navigateTo(routeKey) {
-  const validRouteKey = routes[routeKey] ? routeKey : "inicio";
-  const route = routes[validRouteKey];
-  const contentElement = document.getElementById("app-content");
-  let cssElement = document.getElementById("module-css");
+  const validKey = routes[routeKey] ? routeKey : "inicio";
+  const route = routes[validKey];
+  const contentEl = document.getElementById("app-content");
+  let cssLink = document.getElementById("module-css");
 
-  if (!cssElement) {
-    cssElement = document.createElement("link");
-    cssElement.id = "module-css";
-    cssElement.rel = "stylesheet";
-    document.head.appendChild(cssElement);
+  if (!cssLink) {
+    cssLink = document.createElement("link");
+    cssLink.id = "module-css";
+    cssLink.rel = "stylesheet";
+    document.head.appendChild(cssLink);
   }
 
   try {
-    const response = await fetch(`${route.html}?v=${Date.now()}`);
-    if (!response.ok) throw new Error(`No se pudo cargar: ${route.html}`);
-    const html = await response.text();
-    contentElement.innerHTML = html;
+    const res = await fetch(`${route.html}?v=${Date.now()}`);
+    if (!res.ok) throw new Error(`HTML no encontrado: ${route.html}`);
+    contentEl.innerHTML = await res.text();
 
     if (route.css) {
-      cssElement.href = `${route.css}?v=${Date.now()}`;
-    } else {
-      cssElement.href = "";
+      cssLink.href = `${route.css}?v=${Date.now()}`;
     }
 
     if (route.js) {
-      const cleanJsPath = route.js.startsWith("./")
-        ? route.js
-        : `./${route.js}`;
-      const moduleScript = await import(`${cleanJsPath}?v=${Date.now()}`);
+      const moduleScript = await import(`./${route.js}?v=${Date.now()}`);
       if (moduleScript && typeof moduleScript.init === "function") {
         moduleScript.init();
       }
     }
 
-    updateActiveNavLink(validRouteKey);
-    observeScrollElements();
+    updateActiveNavLinks(validKey);
     window.scrollTo({ top: 0, behavior: "smooth" });
-  } catch (error) {
-    console.error("Error al navegar:", error);
-    if (contentElement) {
-      contentElement.innerHTML =
-        "<h2 style='text-align:center; padding: 4rem;'>404 - Módulo no encontrado</h2>";
-    }
+  } catch (err) {
+    console.error("Error al navegar:", err);
   }
+}
+
+function updateActiveNavLinks(activeKey) {
+  document.querySelectorAll("[data-module]").forEach((link) => {
+    if (link.dataset.module === activeKey) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
 }
 
 function handleHashChange() {
@@ -267,9 +203,7 @@ function handleHashChange() {
   navigateTo(routeKey);
 }
 
-// Inicialización de la SPA
 window.addEventListener("DOMContentLoaded", async () => {
-  initScrollObserver();
   await loadLayout();
   handleHashChange();
 });
