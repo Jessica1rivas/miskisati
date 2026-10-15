@@ -1,173 +1,21 @@
-<header class="main-header" id="header">
-    <div class="header-container">
-
-        <!-- LOGO Y MARCA (IMAGEN OFICIAL) -->
-        <a href="#inicio" class="brand-logo" data-module="inicio">
-            <div class="logo-img-wrapper">
-                <img src="img/logo.png" alt="Logo MISKI SATI" class="header-logo-img">
-            </div>
-            <div class="logo-text-group">
-                <span class="brand-name">MISKI SATI</span>
-                <span class="brand-subtext">S.A.C.</span>
-            </div>
-        </a>
-
-        <!-- NAVEGACIÓN DESKTOP (4 OPCIONES A LA VISTA) -->
-        <div class="nav-scroll-wrapper">
-            <button class="nav-arrow-btn prev" id="navPrevBtn" aria-label="Anterior">
-                <i class="fa-solid fa-chevron-left"></i>
-            </button>
-
-            <nav class="main-nav" id="mainNav">
-                <ul class="nav-list">
-                    <li>
-                        <a href="#inicio" class="nav-link active" data-module="inicio">
-                            <i class="fa-solid fa-house"></i> Inicio
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#empresa" class="nav-link" data-module="empresa">
-                            <i class="fa-solid fa-building"></i> Empresa
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#publico-objetivo" class="nav-link" data-module="publico-objetivo">
-                            <i class="fa-solid fa-users"></i> Público objetivo
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#identidad-corporativa" class="nav-link" data-module="identidad-corporativa">
-                            <i class="fa-solid fa-briefcase"></i> Identidad corporativa
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#identidad-visual" class="nav-link" data-module="identidad-visual">
-                            <i class="fa-solid fa-palette"></i> Identidad visual
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#imagen-institucional" class="nav-link" data-module="imagen-institucional">
-                            <i class="fa-solid fa-award"></i> Imagen institucional
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#aplicaciones" class="nav-link" data-module="aplicaciones">
-                            <i class="fa-solid fa-layer-group"></i> Aplicaciones
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#comunicacion" class="nav-link" data-module="comunicacion">
-                            <i class="fa-solid fa-comments"></i> Comunicación
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#manual-identidad" class="nav-link" data-module="manual-identidad">
-                            <i class="fa-solid fa-book"></i> Manual de identidad
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#propuestas-mejora" class="nav-link" data-module="propuestas-mejora">
-                            <i class="fa-solid fa-chart-line"></i> Propuestas de mejora
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-
-            <button class="nav-arrow-btn next" id="navNextBtn" aria-label="Siguiente">
-                <i class="fa-solid fa-chevron-right"></i>
-            </button>
+<div class="header-container">
+    <!-- LOGO Y NOMBRE DE MARCA -->
+    <a href="#inicio" class="brand-logo" data-module="inicio">
+        <div class="logo-img-wrapper">
+            <img src="img/logo.png" alt="Logo MISKI SATI" class="header-logo-img"
+                onerror="this.src='https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&w=100&q=80'">
         </div>
+        <span class="brand-name">MISKI SATI</span>
+    </a>
 
-        <!-- ACCIONES Y BOTÓN DE MENÚ MÓVIL -->
-        <div class="header-actions">
-            <a href="https://api.whatsapp.com/send?phone=51974355078&text=Hola%20quiero%20reservar%20una%20mesa%20y%20deseo%20saber%20más%20información"
-                target="_blank" rel="noopener noreferrer" class="btn-header-reserve">
-                <i class="fa-brands fa-whatsapp"></i> Reservar
-            </a>
-            <button class="mobile-toggle-btn" id="mobileToggleBtn" aria-label="Abrir menú">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-        </div>
-
+    <!-- ACCIONES: BUSCADOR Y BOTÓN HAMBURGUESA -->
+    <div class="header-actions">
+        <button class="btn-icon-header" title="Buscar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="btn-burger-header" id="burgerToggleBtn" aria-label="Abrir Menú de Módulos">
+            <i class="fa-solid fa-bars-staggered"></i>
+        </button>
     </div>
+</div>
 
-    <!-- MENÚ MÓVIL FULLSCREEN -->
-    <div class="mobile-nav-drawer" id="mobileNavDrawer">
-        <div class="mobile-drawer-header">
-            <div class="brand-logo">
-                <div class="logo-img-wrapper">
-                    <img src="img/logo.png" alt="Logo MISKI SATI" class="header-logo-img">
-                </div>
-                <span class="brand-name">MISKI SATI S.A.C.</span>
-            </div>
-            <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Cerrar menú">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-        </div>
-
-        <ul class="mobile-nav-list">
-            <li>
-                <a href="#inicio" class="mobile-link active" data-module="inicio">
-                    <i class="fa-solid fa-house"></i> Inicio
-                </a>
-            </li>
-            <li>
-                <a href="#empresa" class="mobile-link" data-module="empresa">
-                    <i class="fa-solid fa-building"></i> Empresa
-                </a>
-            </li>
-            <li>
-                <a href="#publico-objetivo" class="mobile-link" data-module="publico-objetivo">
-                    <i class="fa-solid fa-users"></i> Público objetivo
-                </a>
-            </li>
-            <li>
-                <a href="#identidad-corporativa" class="mobile-link" data-module="identidad-corporativa">
-                    <i class="fa-solid fa-briefcase"></i> Identidad corporativa
-                </a>
-            </li>
-            <li>
-                <a href="#identidad-visual" class="mobile-link" data-module="identidad-visual">
-                    <i class="fa-solid fa-palette"></i> Identidad visual
-                </a>
-            </li>
-            <li>
-                <a href="#imagen-institucional" class="mobile-link" data-module="imagen-institucional">
-                    <i class="fa-solid fa-award"></i> Imagen institucional
-                </a>
-            </li>
-            <li>
-                <a href="#aplicaciones" class="mobile-link" data-module="aplicaciones">
-                    <i class="fa-solid fa-layer-group"></i> Aplicaciones
-                </a>
-            </li>
-            <li>
-                <a href="#comunicacion" class="mobile-link" data-module="comunicacion">
-                    <i class="fa-solid fa-comments"></i> Comunicación
-                </a>
-            </li>
-            <li>
-                <a href="#manual-identidad" class="mobile-link" data-module="manual-identidad">
-                    <i class="fa-solid fa-book"></i> Manual de identidad
-                </a>
-            </li>
-            <li>
-                <a href="#propuestas-mejora" class="mobile-link" data-module="propuestas-mejora">
-                    <i class="fa-solid fa-chart-line"></i> Propuestas de mejora
-                </a>
-            </li>
-            <li style="margin-top: 1rem;">
-                <a href="https://api.whatsapp.com/send?phone=51974355078&text=hola%20quiero%20reservara%20una%20mas%20y%20mas%20informacion"
-                    target="_blank" rel="noopener noreferrer" class="btn-header-reserve"
-                    style="width: 100%; justify-content: center; padding: 0.8rem;">
-                    <i class="fa-brands fa-whatsapp"></i> Reservar vía WhatsApp
-                </a>
-            </li>
-        </ul>
-
-        <div class="mobile-drawer-footer">
-            <p><i class="fa-solid fa-location-dot"></i> Satipo, Junín - Perú</p>[cite: 20]
-            <p><i class="fa-solid fa-clock"></i> Lun - Dom: 08:00 AM - 10:00 PM</p>
-        </div>
-    </div>
-</header>
