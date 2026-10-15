@@ -4,31 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MISKI SATI S.A.C. | Sabores de Satipo</title>
 
-    <!-- Definición de URL Base Relativa -->
     <base href="./">
 
-    <title>JESSICA | Sistema Web Modular</title>
-
-    <!-- Estilos Globales e Iconos FontAwesome -->
-    <link rel="stylesheet" href="global.css">
+    <!-- FontAwesome & Google Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- Inyección dinámica de CSS por módulo -->
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="global.css">
+
+    <!-- Inyección dinámica de CSS del módulo -->
     <link id="module-css" rel="stylesheet" href="">
 </head>
 
 <body>
 
-    <!-- Header cargado desde layout/header.html -->
-    <div id="header-container"></div>
+    <!-- Header dinámico desde layout/header.html -->
+    <header id="header-container" class="main-header"></header>
 
-    <!-- Contenedor del módulo activo -->
+    <!-- Contenedor dinámico SPA -->
     <main id="app-content" class="app-viewport"></main>
 
-    <!-- Footer cargado desde layout/footer.html -->
-    <div id="footer-container"></div>
+    <!-- Footer dinámico desde layout/footer.html -->
+    <footer id="footer-container" class="main-footer"></footer>
 
+    <!-- menu -->
+    <!-- MENÚ OFF-CANVAS CON LOS 10 MÓDULOS -->
+    <div class="offcanvas-overlay" id="offcanvasOverlay"></div>
+    <aside class="offcanvas-drawer" id="offcanvasDrawer">
+        <div class="drawer-header">
+            <h3 class="drawer-title">Módulos del Sistema</h3>
+            <button class="btn-close-drawer" id="closeDrawerBtn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <nav class="drawer-nav">
+            <ul class="drawer-menu-list">
+                <li><a href="#inicio" class="drawer-menu-link active" data-module="inicio"><i
+                            class="fa-solid fa-house"></i>
+                        1. Inicio</a></li>
+                <li><a href="#empresa" class="drawer-menu-link" data-module="empresa"><i
+                            class="fa-solid fa-building"></i>
+                        2. Empresa</a></li>
+                <li><a href="#publico-objetivo" class="drawer-menu-link" data-module="publico-objetivo"><i
+                            class="fa-solid fa-users"></i> 3. Público Objetivo</a></li>
+                <li><a href="#identidad-corporativa" class="drawer-menu-link" data-module="identidad-corporativa"><i
+                            class="fa-solid fa-briefcase"></i> 4. Identidad Corporativa</a></li>
+                <li><a href="#identidad-visual" class="drawer-menu-link" data-module="identidad-visual"><i
+                            class="fa-solid fa-palette"></i> 5. Identidad Visual</a></li>
+                <li><a href="#imagen-institucional" class="drawer-menu-link" data-module="imagen-institucional"><i
+                            class="fa-solid fa-award"></i> 6. Imagen Institucional</a></li>
+                <li><a href="#aplicaciones" class="drawer-menu-link" data-module="aplicaciones"><i
+                            class="fa-solid fa-layer-group"></i> 7. Aplicaciones</a></li>
+                <li><a href="#comunicacion" class="drawer-menu-link" data-module="comunicacion"><i
+                            class="fa-solid fa-comments"></i> 8. Plan de Comunicación</a></li>
+                <li><a href="#manual-identidad" class="drawer-menu-link" data-module="manual-identidad"><i
+                            class="fa-solid fa-book"></i> 9. Manual de Identidad</a></li>
+                <li><a href="#propuestas-mejora" class="drawer-menu-link" data-module="propuestas-mejora"><i
+                            class="fa-solid fa-chart-line"></i> 10. Propuestas de Mejora</a></li>
+            </ul>
+        </nav>
+
+        <div class="drawer-footer">
+            <p><strong>MISKI SATI S.A.C.</strong> &copy; 2026</p>
+            <span>Satipo, Junín - Perú</span>
+        </div>
+    </aside>
+    <!-- JS Principal -->
     <script src="main.js" type="module"></script>
 </body>
 
