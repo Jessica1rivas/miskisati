@@ -1,77 +1,1107 @@
-<!DOCTYPE html>
-<html lang="es">
+<div class="comunicacion-container">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MISKI SATI S.A.C. | Sabores de Satipo</title>
+    <!-- HERO SECTION: PLAN DE COMUNICACIÓN CORPORATIVA -->
+    <section class="com-hero">
+        <div class="hero-overlay"></div>
 
-    <base href="./">
-
-    <!-- FontAwesome & Google Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <!-- CSS Global -->
-    <link rel="stylesheet" href="global.css">
-
-    <!-- Inyección dinámica de CSS del módulo -->
-    <link id="module-css" rel="stylesheet" href="">
-</head>
-
-<body>
-
-    <!-- Header dinámico desde layout/header.html -->
-    <header id="header-container" class="main-header"></header>
-
-    <!-- Contenedor dinámico SPA -->
-    <main id="app-content" class="app-viewport"></main>
-
-    <!-- Footer dinámico desde layout/footer.html -->
-    <footer id="footer-container" class="main-footer"></footer>
-
-    <!-- menu -->
-    <!-- MENÚ OFF-CANVAS CON LOS 10 MÓDULOS -->
-    <div class="offcanvas-overlay" id="offcanvasOverlay"></div>
-    <aside class="offcanvas-drawer" id="offcanvasDrawer">
-        <div class="drawer-header">
-            <h3 class="drawer-title">Módulos del Sistema</h3>
-            <button class="btn-close-drawer" id="closeDrawerBtn"><i class="fa-solid fa-xmark"></i></button>
+        <!-- Wave Superior SVG -->
+        <div class="wave-shape wave-top">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0 C150,90 350,-40 500,50 C650,140 900,10 1200,40 L1200,0 L0,0 Z" fill="#F9F6F0"
+                    opacity="0.15"></path>
+            </svg>
         </div>
 
-        <nav class="drawer-nav">
-            <ul class="drawer-menu-list">
-                <li><a href="#inicio" class="drawer-menu-link active" data-module="inicio"><i
-                            class="fa-solid fa-house"></i>
-                        1. Inicio</a></li>
-                <li><a href="#empresa" class="drawer-menu-link" data-module="empresa"><i
-                            class="fa-solid fa-building"></i>
-                        2. Empresa</a></li>
-                <li><a href="#publico-objetivo" class="drawer-menu-link" data-module="publico-objetivo"><i
-                            class="fa-solid fa-users"></i> 3. Público Objetivo</a></li>
-                <li><a href="#identidad-corporativa" class="drawer-menu-link" data-module="identidad-corporativa"><i
-                            class="fa-solid fa-briefcase"></i> 4. Identidad Corporativa</a></li>
-                <li><a href="#identidad-visual" class="drawer-menu-link" data-module="identidad-visual"><i
-                            class="fa-solid fa-palette"></i> 5. Identidad Visual</a></li>
-                <li><a href="#imagen-institucional" class="drawer-menu-link" data-module="imagen-institucional"><i
-                            class="fa-solid fa-award"></i> 6. Imagen Institucional</a></li>
-                <li><a href="#aplicaciones" class="drawer-menu-link" data-module="aplicaciones"><i
-                            class="fa-solid fa-layer-group"></i> 7. Aplicaciones</a></li>
-                <li><a href="#comunicacion" class="drawer-menu-link" data-module="comunicacion"><i
-                            class="fa-solid fa-comments"></i> 8. Plan de Comunicación Corporativa</a></li>
-                <li><a href="#manual-identidad" class="drawer-menu-link" data-module="manual-identidad"><i
-                            class="fa-solid fa-book"></i> 9. Manual de Identidad</a></li>
-                <li><a href="#propuestas-mejora" class="drawer-menu-link" data-module="propuestas-mejora"><i
-                            class="fa-solid fa-chart-line"></i> 10. Propuestas de Mejora</a></li>
-            </ul>
-        </nav>
+        <div class="hero-content animate-on-scroll" data-animation="fade-down">
+            <div class="hero-logo-wrapper">
+                <div class="logo-ring-badge floating-logo">
+                    <img src="img/logo.png" alt="Logo MISKI SATI S.A.C." class="hero-logo-img"
+                        onerror="this.src='https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&w=300&q=80'">
+                </div>
+                <span class="logo-caption"><i class="fa-solid fa-comments"></i> MISKI SATI S.A.C.</span>
+            </div>
 
-        <div class="drawer-footer">
-            <p><strong>MISKI SATI S.A.C.</strong> &copy; 2026</p>
-            <span>Satipo, Junín - Perú</span>
+            <h1 class="com-title animate-on-scroll" data-animation="slide-up">Plan de Comunicación Corporativa</h1>
+            <p class="com-slogan animate-on-scroll" data-animation="slide-up" data-delay="100">
+                "Miski Sati: esencia que comunica."
+            </p>
+
+            <div class="hero-keywords animate-on-scroll" data-animation="zoom-in" data-delay="200">
+                <span class="kw-tag"><i class="fa-solid fa-tag"></i> #SelvaCentral</span>
+                <span class="kw-tag"><i class="fa-solid fa-tag"></i> #Satipo</span>
+                <span class="kw-tag"><i class="fa-solid fa-tag"></i> #PlanTrimestral</span>
+                <span class="kw-tag"><i class="fa-solid fa-tag"></i> #ComidaSelvática</span>
+            </div>
+
+            <div class="hero-actions animate-on-scroll" data-animation="slide-up" data-delay="300">
+                <a href="#sec-1" class="btn btn-hero-primary">
+                    <i class="fa-solid fa-circle-info"></i> Datos del Plan
+                </a>
+                <a href="#sec-8" class="btn btn-hero-outline">
+                    <i class="fa-solid fa-images"></i> Canales
+                </a>
+                <a href="#sec-11" class="btn btn-hero-outline">
+                    <i class="fa-solid fa-calculator"></i> Presupuesto & KPIs
+                </a>
+                <a href="#reservas-whatsapp" class="btn btn-hero-primary btn-wssp-highlight">
+                    <i class="fa-brands fa-whatsapp"></i> Reservar Mesa
+                </a>
+            </div>
         </div>
-    </aside>
-    <!-- JS Principal -->
-    <script src="main.js" type="module"></script>
-</body>
 
-</html>
+        <!-- Wave Inferior SVG -->
+        <div class="wave-shape wave-bottom">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path class="wave-path" d="M0,0 C300,90 600,10 900,80 C1050,115 1150,40 1200,60 L1200,120 L0,120 Z"
+                    fill="#F9F6F0"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- 1. DATOS GENERALES -->
+    <section id="sec-1" class="section-block bg-panel-curved">
+        <div class="section-header text-center animate-on-scroll" data-animation="fade-up">
+            <span class="section-tag">INFORMACIÓN INSTITUCIONAL</span>
+            <h2 class="section-title">1. Datos Generales</h2>
+            <div class="title-underline"></div>
+        </div>
+
+        <div class="summary-card animate-on-scroll" data-animation="fade-up">
+            <p class="section-description">
+                Plan de comunicación corporativa trimestral para organizar la difusión interna y externa de MISKI SATI
+                S.A.C., consolidando su identidad gastronómica en Satipo.
+            </p>
+            <div class="keywords-bar">
+                <span class="kw-pill">#MISKISATI</span>
+                <span class="kw-pill">#PlanTrimestral</span>
+                <span class="kw-pill">#ComidaSelvática</span>
+                <span class="kw-pill">#SatipoJunín</span>
+            </div>
+        </div>
+
+        <div class="table-responsive-wrapper animate-on-scroll" data-animation="zoom-in">
+            <table class="com-data-table">
+                <thead>
+                    <tr>
+                        <th>Campo</th>
+                        <th>Información de la Empresa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Nombre de la empresa</strong></td>
+                        <td>MISKI SATI S.A.C.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nombre de la marca</strong></td>
+                        <td>MISKI SATI</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Giro del negocio</strong></td>
+                        <td>Gastronomía selvática / restaurante de comida de la Selva Central.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Actividad principal</strong></td>
+                        <td>Preparación y comercialización de platos selváticos, bebidas frías y calientes, café de
+                            Satipo, postres y preparaciones con productos representativos de la zona.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ubicación</strong></td>
+                        <td>Satipo, Junín, Perú.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Público objetivo</strong></td>
+                        <td>Habitantes de Satipo, jóvenes y adultos, visitantes nacionales e internacionales, turistas y
+                            personas interesadas en la gastronomía de la Selva Central.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ámbito de comunicación</strong></td>
+                        <td>Interno: administración y personal. Externo: clientes, comunidad y visitantes.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Duración del plan</strong></td>
+                        <td>3 meses (trimestral).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Responsable</strong></td>
+                        <td>Administrador o persona designada para comunicación y marketing.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nombre del plan</strong></td>
+                        <td>“Miski Sati: esencia que comunica”.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 2. PRESENTACIÓN -->
+    <section id="sec-2" class="section-block">
+        <div class="section-header text-center animate-on-scroll" data-animation="fade-up">
+            <span class="section-tag">INTRODUCCIÓN Y PROPÓSITO</span>
+            <h2 class="section-title">2. Presentación</h2>
+            <div class="title-underline"></div>
+        </div>
+
+        <div class="summary-card animate-on-scroll" data-animation="fade-up">
+            <p class="section-description">
+                El presente Plan de Comunicación Corporativa tiene como finalidad organizar las estrategias, acciones,
+                canales y mensajes que utilizará MISKI SATI para comunicarse de manera coherente con su personal,
+                clientes y público objetivo. El plan busca fortalecer la identidad de la marca como restaurante rústico
+                de comida selvática, difundir la gastronomía y los productos de Satipo y la Selva Central, y proyectar
+                una imagen auténtica, cálida y acogedora mediante redes sociales, WhatsApp, materiales impresos y la
+                atención en el establecimiento.
+            </p>
+            <div class="keywords-bar">
+                <span class="kw-pill">#EstrategiaCorporativa</span>
+                <span class="kw-pill">#IdentidadAuténtica</span>
+                <span class="kw-pill">#GastronomíaSelvática</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. DIAGNÓSTICO DE LA COMUNICACIÓN -->
+    <section id="sec-3" class="section-block bg-panel-curved">
+        <div class="section-header text-center animate-on-scroll" data-animation="fade-up">
+            <span class="section-tag">EVALUACIÓN DE ENTORNO</span>
+            <h2 class="section-title">3. Diagnóstico de la Comunicación</h2>
+            <div class="title-underline"></div>
+        </div>
+
+        <div class="summary-card animate-on-scroll" data-animation="fade-up">
+            <p class="section-description">
+                Evaluación cualitativa de la situación comunicacional interna de coordinación operativa y el entorno
+                externo de difusión de marca.
+            </p>
+            <div class="keywords-bar">
+                <span class="kw-pill">#SituaciónInterna</span>
+                <span class="kw-pill">#SituaciónExterna</span>
+                <span class="kw-pill">#NecesidadCoordinación</span>
+            </div>
+        </div>
+
+        <div class="table-responsive-wrapper animate-on-scroll" data-animation="zoom-in">
+            <table class="com-data-table">
+                <thead>
+                    <tr>
+                        <th>Ámbito</th>
+                        <th>Diagnóstico y Situación Actual</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>3.1 Situación interna</strong></td>
+                        <td>Se recomienda establecer una comunicación coordinada entre administración y personal sobre
+                            menú disponible, ingredientes, precios, promociones, atención al cliente y cambios
+                            operativos. También conviene definir quién actualiza y aprueba las piezas publicitarias.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>3.2 Situación externa</strong></td>
+                        <td>La marca puede reforzar su presencia mediante publicaciones constantes y una línea gráfica
+                            reconocible. Es importante facilitar al público información clara sobre los platos, bebidas,
+                            precios, ubicación y formas de contacto, además de destacar la identidad gastronómica de
+                            Satipo.</td>
+                    </tr>
+                    <tr class="total-highlight-row">
+                        <td><strong>Necesidad principal identificada</strong></td>
+                        <td>Organizar la comunicación y mantener mensajes e imagen visual coherentes en los distintos
+                            puntos de contacto con el público.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 4. ANÁLISIS FODA DE LA COMUNICACIÓN -->
+    <section id="sec-4" class="section-block">
+        <div class="section-header text-center animate-on-scroll" data-animation="fade-up">
+            <span class="section-tag">ANÁLISIS ESTRATÉGICO</span>
+            <h2 class="section-title">4. Análisis FODA de la Comunicación</h2>
+            <div class="title-underline"></div>
+        </div>
+
+        <div class="summary-card animate-on-scroll" data-animation="fade-up">
+            <p class="section-description">
+                Evaluación de las fortalezas internas de la marca, oportunidades del entorno turístico y desafíos
+                digitales frente a competidores.
+            </p>
+            <div class="keywords-bar">
+                <span class="kw-pill">#Fortalezas</span>
+                <span class="kw-pill">#Oportunidades</span>
+                <span class="kw-pill">#Debilidades</span>
+                <span class="kw-pill">#Amenazas</span>
+            </div>
+        </div>
+
+        <div class="foda-grid-cards">
+            <div class="foda-box card-pink-soft animate-on-scroll" data-animation="slide-right">
+                <div class="foda-head"><i class="fa-solid fa-shield-halved"></i> Fortalezas (F) – Internas</div>
+                <ul>
+                    <li>Identidad vinculada con Satipo y la Selva Central.</li>
+                    <li>Propuesta rústica, auténtica y acogedora.</li>
+                    <li>Posibilidad de destacar café y productos de la zona.</li>
+                </ul>
+            </div>
+
+            <div class="foda-box card-green-soft animate-on-scroll" data-animation="slide-left">
+                <div class="foda-head"><i class="fa-solid fa-lightbulb"></i> Oportunidades (O) – Externas</div>
+                <ul>
+                    <li>Interés de visitantes por conocer la gastronomía local.</li>
+                    <li>Uso de Reels, TikTok y publicaciones para mostrar platos y preparación.</li>
+                    <li>Difusión mediante recomendaciones de clientes y contenido turístico.</li>
+                </ul>
+            </div>
+
+            <div class="foda-box card-yellow-soft animate-on-scroll" data-animation="slide-right" data-delay="100">
+                <div class="foda-head"><i class="fa-solid fa-triangle-exclamation"></i> Debilidades (D) – Internas</div>
+                <ul>
+                    <li>Necesidad de organizar la frecuencia y planificación de contenidos.</li>
+                    <li>La información de productos y precios puede quedar desactualizada si no existe un responsable.
+                    </li>
+                    <li>Falta por definir un sistema constante de medición de resultados.</li>
+                </ul>
+            </div>
+
+            <div class="foda-box card-orange-soft animate-on-scroll" data-animation="slide-left" data-delay="100">
+                <div class="foda-head"><i class="fa-solid fa-bullseye"></i> Amenazas (A) – Externas</div>
+                <ul>
+                    <li>Competencia de restaurantes y negocios gastronómicos de la zona.</li>
+                    <li>Cambios en preferencias del público y saturación de contenido en redes.</li>
+                    <li>Negocios competidores con mayor presupuesto publicitario.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. PÚBLICOS OBJETIVO -->
+    <section id="sec-5" class="section-block bg-panel-curved">
+        <div class="section-header text-center animate-on-scroll" data-animation="fade-up">
+            <span class="section-tag">SEGMENTACIÓN DE AUDIENCIA</span>
+            <h2 class="section-title">5. Públicos Objetivo</h2>
+            <div class="title-underline"></div>
+        </div>
+
+        <div class="summary-card animate-on-scroll" data-animation="fade-up">
+            <p class="section-description">
+                Identificación de los receptores de la comunicación corporativa y sus requerimientos específicos de
+                información.
+            </p>
+            <div class="keywords-bar">
+                <span class="kw-pill">#PúblicoInterno</span>
+                <span class="kw-pill">#ClientesLocales</span>
+                <span class="kw-pill">#TuristasYVisitantes</span>
+            </div>
+        </div>
+
+        <div class="table-responsive-wrapper animate-on-scroll" data-animation="zoom-in">
+            <table class="com-data-table">
+                <thead>
+                    <tr>
+                        <th>Público</th>
+                        <th>Características</th>
+                        <th>Necesidad de Comunicación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Público interno</strong></td>
+                        <td>Administrador y personal que participa en la preparación, atención y operación del
+                            restaurante.</td>
+                        <td>Recibir información actualizada sobre platos disponibles, precios, promociones, atención y
+                            cambios de servicio.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Clientes locales</strong></td>
+                        <td>Habitantes de Satipo, jóvenes y adultos de 17 años a más.</td>
+                        <td>Conocer el menú, precios, novedades, horarios y promociones.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Visitantes y turistas</strong></td>
+                        <td>Personas de otras ciudades del Perú y del extranjero.</td>
+                        <td>Descubrir la gastronomía, los productos y la identidad de la Selva Central; acceder
+                            fácilmente a información de contacto.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 6. OBJETIVOS DE COMUNICACIÓN -->
+    <section id="sec-6" class="section-block">
+        <div class="section-header text-center animate-on-scroll" data-animation="fade-up">
+            <span class="section-tag">METAS Y PROPÓSITOS</span>
+            <h2 class="section-title">6. Objetivos de Comunicación</h2>
+            <div class="title-underline"></div>
+        </div>
+
+        <div class="summary-card animate-on-scroll" data-animation="fade-up">
+            <p class="section-description">
+                Objetivo general y objetivos específicos diseñados para orientar las acciones de difusión y la relación
+                con los clientes.
+            </p>
+            <div class="keywords-bar">
+                <span class="kw-pill">#ObjetivoGeneral</span>
+                <span class="kw-pill">#ObjetivosEspecíficos</span>
+                <span class="kw-pill">#PlanTrimestral</span>
+            </div>
+        </div>
+
+        <div class="table-responsive-wrapper animate-on-scroll" data-animation="zoom-in">
+            <table class="com-data-table">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Descripción del Objetivo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="total-highlight-row">
+                        <td><strong>6.1 Objetivo general</strong></td>
+                        <td>Fortalecer durante tres meses la comunicación interna y externa de MISKI SATI para
+                            consolidar su identidad de marca, difundir su oferta gastronómica y mejorar el vínculo con
+                            clientes locales y visitantes.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>O1. Específico 1</strong></td>
+                        <td>Organizar la comunicación interna para mantener actualizada la información de platos,
+                            bebidas, precios y promociones.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>O2. Específico 2</strong></td>
+                        <td>Mantener una presencia digital constante mediante publicaciones planificadas en las redes
+                            sociales seleccionadas por la empresa.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>O3. Específico 3</strong></td>
+                        <td>Dar mayor visibilidad a los productos y preparaciones inspirados en Satipo y la Selva
+                            Central.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>O4. Específico 4</strong></td>
+                        <td>Facilitar consultas y pedidos mediante un canal de contacto claro, como WhatsApp.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>O5. Específico 5</strong></td>
+                        <td>Revisar mensualmente los resultados de las publicaciones, consultas y acciones promocionales
+                            para mejorar el plan.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 7. IDENTIDAD Y MENSAJE CORPORATIVO -->
+    <section id="sec-7" class="section-block bg-panel-curved">
+        <div class="section-header text-center animate-on-scroll" data-animation="fade-up">
+            <span class="section-tag">LINEAMIENTOS VERBALES Y VISUALES</span>
+            <h2 class="section-title">7. Identidad y Mensaje Corporativo</h2>
+            <div class="title-underline"></div>
+        </div>
+
+        <div class="summary-card animate-on-scroll" data-animation="fade-up">
+            <p class="section-description">
+                Directrices de tono comunicacional, eslogan oficial, atributos de marca e identidad gráfica acordados.
+            </p>
+            <div class="keywords-bar">
+                <span class="kw-pill">#TonoHospitalario</span>
+                <span class="kw-pill">#EsloganOficial</span>
+                <span class="kw-pill">#MensajeClave</span>
+                <span class="kw-pill">#PaletaCorporativa</span>
+            </div>
+        </div>
+
+        <div class="verbal-display-duo">
+            <div class="verbal-box animate-on-scroll" data-animation="slide-right">
+                <h3><i class="fa-solid fa-comment-dots"></i> Mensajes Oficiales & Tono</h3>
+                <div class="quote-item">
+                    <small>Mensaje Principal:</small>
+                    <p>“Miski Sati, esencia de nuestra selva.”</p>
+                </div>
+                <div class="quote-item">
+                    <small>Eslogan:</small>
+                    <p>“El sabor auténtico de la selva.”</p>
+                </div>
+                <p style="margin-top:0.8rem; font-size:0.85rem; color:#444;">
+                    <strong>Tono de comunicación:</strong> Cercano, amigable, sencillo y hospitalario; debe transmitir
+                    orgullo por los sabores y productos de Satipo.
+                </p>
+            </div>
+
+            <div class="verbal-box animate-on-scroll" data-animation="slide-left">
+                <h3><i class="fa-solid fa-palette"></i> Atributos & Identidad Visual</h3>
+                <p><strong>Atributos de marca:</strong></p>
+                <div class="attr-tags">
+                    <span>Rústica</span> <span>Amazónica</span> <span>Auténtica</span> <span>Acogedora</span>
+                    <span>Tradicional</span> <span>Cercana</span> <span>Turística</span>
+                </div>
+                <p style="margin-top:1rem; font-size:0.85rem; color:#444;">
+                    <strong>Identidad visual:</strong> Utilizar el logotipo existente y respetar la paleta corporativa
+                    documentada: rojo, naranja, verde, dorado, amarillo, negro y crema. No alterar el logotipo.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. CANALES DE COMUNICACIÓN -->
+    <section id="sec-8" class="section-block">
+        <div class="section-header text-center animate-on-scroll" data-animation="fade-up">
+            <span class="section-tag">ECOSISTEMA DE MEDIOS</span>
+            <h2 class="section-title">8. Canales de Comunicación</h2>
+            <div class="title-underline"></div>
+        </div>
+
+        <div class="summary-card animate-on-scroll" data-animation="fade-up">
+            <p class="section-description">
+                Ecosistema multimedios para proyectar la propuesta de valor en redes sociales, canales de mensajería y
+                soportes presenciales.
+            </p>
+            <div class="keywords-bar">
+                <span class="kw-pill">#Facebook</span>
+                <span class="kw-pill">#Instagram</span>
+                <span class="kw-pill">#TikTok</span>
+                <span class="kw-pill">#WhatsApp</span>
+                <span class="kw-pill">#PáginaWeb</span>
+                <span class="kw-pill">#Afiches</span>
+            </div>
+        </div>
+
+        <!-- Galería de Canales -->
+        <div class="media-gallery-grid">
+            <div class="media-card animate-on-scroll" data-animation="zoom-in" data-delay="50">
+                <div class="media-badge badge-fb"><i class="fa-brands fa-facebook"></i> Facebook</div>
+                <div class="media-img-container">
+                    <img src="img/facebook.png" alt="Canal Facebook Miski Sati" class="com-zoom-img"
+                        onerror="this.src='https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=500&q=80'">
+                </div>
+                <div class="media-info">
+                    <h4>Página de Facebook</h4>
+                    <p class="media-desc">Difundir platos, promociones, novedades y contenido del restaurante dirigido a
+                        público local y familias.</p>
+                    <div class="media-kw">#ComunidadLocal #Promociones #PlatosDelDía</div>
+                </div>
+            </div>
+
+            <div class="media-card animate-on-scroll" data-animation="zoom-in" data-delay="100">
+                <div class="media-badge badge-ig"><i class="fa-brands fa-instagram"></i> Instagram</div>
+                <div class="media-img-container">
+                    <img src="img/instagram.png" alt="Canal Instagram Miski Sati" class="com-zoom-img"
+                        onerror="this.src='https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=500&q=80'">
+                </div>
+                <div class="media-info">
+                    <h4>Perfil de Instagram</h4>
+                    <p class="media-desc">Mostrar fotografías cuidadas de platos y bebidas, historias y reels
+                        interactivos para visitantes.</p>
+                    <div class="media-kw">#FotografíaGastronómica #Reels #Turismo</div>
+                </div>
+            </div>
+
+            <div class="media-card animate-on-scroll" data-animation="zoom-in" data-delay="150">
+                <div class="media-badge badge-tt"><i class="fa-brands fa-tiktok"></i> TikTok</div>
+                <div class="media-img-container">
+                    <img src="img/tiktok.png" alt="Canal TikTok Miski Sati" class="com-zoom-img"
+                        onerror="this.src='https://images.unsplash.com/photo-1596558450255-7c0b7be9d56a?auto=format&fit=crop&w=500&q=80'">
+                </div>
+                <div class="media-info">
+                    <h4>Canal de TikTok</h4>
+                    <p class="media-desc">Presentar preparaciones, ingredientes locales y experiencias culinarias
+                        dinámicas en el restaurante.</p>
+                    <div class="media-kw">#VideosCortos #Preparación #CaféSatipo</div>
+                </div>
+            </div>
+
+            <div class="media-card animate-on-scroll" data-animation="zoom-in" data-delay="200">
+                <div class="media-badge badge-web"><i class="fa-solid fa-laptop"></i> Portal Web</div>
+                <div class="media-img-container">
+                    <img src="img/pagina_web.png" alt="Portal Web Miski Sati" class="com-zoom-img"
+                        onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80'">
+                </div>
+                <div class="media-info">
+                    <h4>Página Web Oficial</h4>
+                    <p class="media-desc">Portal institucional con carta digital, historia de la marca y módulo directo
+                        de reservas.</p>
+                    <div class="media-kw">#CartaDigital #ReservasEnLínea #Historia</div>
+                </div>
+            </div>
+
+            <div class="media-card animate-on-scroll" data-animation="zoom-in" data-delay="250">
+                <div class="media-badge badge-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</div>
+                <div class="media-img-container">
+                    <img src="img/wasa.png" alt="WhatsApp Business Miski Sati" class="com-zoom-img"
+                        onerror="this.src='https://images.unsplash.com/photo-1577563908411-5077b6dc7624?auto=format&fit=crop&w=500&q=80'">
+                </div>
+                <div class="media-info">
+                    <h4>WhatsApp Business</h4>
+                    <p class="media-desc">Responder preguntas, compartir menú actualizado y orientar sobre pedidos o
+                        reservas.</p>
+                    <div class="media-kw">#AtenciónInmediata #Pedidos #Reservas</div>
+                </div>
+            </div>
+
+            <div class="media-card animate-on-scroll" data-animation="zoom-in" data-delay="300">
+                <div class="media-badge badge-print"><i class="fa-solid fa-bullhorn"></i> Afiches</div>
+                <div class="media-img-container">
+                    <img src="img/afiches.png" alt="Afiches Impresos Miski Sati" class="com-zoom-img"
+                        onerror="this.src='https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=500&q=80'">
+                </div>
+                <div class="media-info">
+                    <h4>Afiches & Material Impreso</h4>
+                    <p class="media-desc">Comunicar promociones en el establecimiento y reforzar la identidad visual
+                        ante clientes del local.</p>
+                    <div class="media-kw">#MaterialRústico #PuntoDeVenta #Local</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla Matriz de Canales -->
+        <div class="table-responsive-wrapper animate-on-scroll" data-animation="zoom-in">
+            <table class="com-data-table">
+                <thead>
+                    <tr>
+                        <th>Canal</th>
+                        <th>Público Objetivo</th>
+                        <th>Objetivo Principal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Facebook</strong></td>
+                        <td>Público local, familias y público general.</td>
+                        <td>Difundir platos, promociones, novedades y contenido del restaurante.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Instagram</strong></td>
+                        <td>Jóvenes, adultos y visitantes interesados en gastronomía.</td>
+                        <td>Mostrar fotografías cuidadas de platos y bebidas, historias y videos cortos.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>TikTok</strong></td>
+                        <td>Público que consume videos breves y contenido gastronómico.</td>
+                        <td>Presentar preparaciones, ingredientes locales y experiencias del restaurante.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>WhatsApp</strong></td>
+                        <td>Clientes y personas que consultan.</td>
+                        <td>Responder preguntas, compartir menú actualizado y orientar sobre pedidos o reservas.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Afiches y material impreso</strong></td>
+                        <td>Clientes del local y público cercano.</td>
+                        <td>Comunicar promociones y reforzar la identidad visual.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Atención presencial</strong></td>
+                        <td>Clientes que visitan el restaurante.</td>
+                        <td>Brindar información clara, trato amable y una experiencia coherente con la marca.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Comunicación interna</strong></td>
+                        <td>Administración y personal.</td>
+                        <td>Coordinar disponibilidad, precios, promociones y pautas de atención.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 9. PLAN DE ACCIONES DETALLADO -->
+    <section id="sec-9" class="section-block bg-panel-curved">
+        <div class="section-header text-center animate-on-scroll" data-animation="fade-up">
+            <span class="section-tag">MATRIZ OPERATIVA</span>
+            <h2 class="section-title">9. Plan de Acciones Detallado</h2>
+            <div class="title-underline"></div>
+        </div>
+
+        <div class="summary-card animate-on-scroll" data-animation="fade-up">
+            <p class="section-description">
+                Asignación explícita de acciones, medios, frecuencia de publicación y roles responsables de la
+                ejecución.
+            </p>
+            <div class="keywords-bar">
+                <span class="kw-pill">#MatrizDeAcciones</span>
+                <span class="kw-pill">#FrecuenciaSugerida</span>
+                <span class="kw-pill">#Responsables</span>
+            </div>
+        </div>
+
+        <div class="table-responsive-wrapper animate-on-scroll" data-animation="zoom-in">
+            <table class="com-data-table">
+                <thead>
+                    <tr>
+                        <th>Acción</th>
+                        <th>Canal</th>
+                        <th>Frecuencia Propuesta</th>
+                        <th>Responsable</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Planificar y aprobar el calendario de contenidos.</td>
+                        <td>Coordinación interna</td>
+                        <td>Al inicio de cada mes</td>
+                        <td>Administrador / encargado designado</td>
+                    </tr>
+                    <tr>
+                        <td>Publicar fotografías de platos y bebidas.</td>
+                        <td>Facebook / Instagram</td>
+                        <td>2–3 veces por semana</td>
+                        <td>Encargado de comunicación</td>
+                    </tr>
+                    <tr>
+                        <td>Publicar videos breves de preparación y productos locales.</td>
+                        <td>Reels / TikTok</td>
+                        <td>1 vez por semana</td>
+                        <td>Encargado de comunicación</td>
+                    </tr>
+                    <tr>
+                        <td>Difundir menú, novedades y promociones vigentes.</td>
+                        <td>Redes sociales / WhatsApp</td>
+                        <td>Semanal y cuando haya cambios</td>
+                        <td>Administrador / atención</td>
+                    </tr>
+                    <tr>
+                        <td>Responder consultas y actualizar la información compartida.</td>
+                        <td>WhatsApp / redes</td>
+                        <td>Diario, según horario de atención</td>
+                        <td>Persona responsable de atención</td>
+                    </tr>
+                    <tr>
+                        <td>Colocar o renovar afiches y material informativo.</td>
+                        <td>Establecimiento</td>
+                        <td>Mensual o cuando cambien promociones</td>
+                        <td>Administrador</td>
+                    </tr>
+                    <tr>
+                        <td>Coordinar información de productos disponibles y precios.</td>
+                        <td>Comunicación interna</td>
+                        <td>Antes de cada campaña y ante cambios</td>
+                        <td>Administrador y personal</td>
+                    </tr>
+                    <tr>
+                        <td>Revisar resultados y registrar mejoras.</td>
+                        <td>Registro mensual</td>
+                        <td>Mensual</td>
+                        <td>Administrador / encargado designado</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 10. CRONOGRAMA DE EJECUCIÓN (3 MESES) -->
+    <section id="sec-10" class="section-block">
+        <div class="section-header text-center animate-on-scroll" data-animation="fade-up">
+            <span class="section-tag">PLANIFICACIÓN TEMPORAL</span>
+            <h2 class="section-title">10. Cronograma de Ejecución (3 Meses)</h2>
+            <div class="title-underline"></div>
+        </div>
+
+        <div class="summary-card animate-on-scroll" data-animation="fade-up">
+            <p class="section-description">
+                Planificación temporal por actividades durante el horizonte de tres meses de implementación del plan.
+            </p>
+            <div class="keywords-bar">
+                <span class="kw-pill">#Mes1</span>
+                <span class="kw-pill">#Mes2</span>
+                <span class="kw-pill">#Mes3</span>
+                <span class="kw-pill">#CronogramaTrimestral</span>
+            </div>
+        </div>
+
+        <div class="table-responsive-wrapper animate-on-scroll" data-animation="zoom-in">
+            <table class="com-data-table">
+                <thead>
+                    <tr>
+                        <th>Actividad</th>
+                        <th>MES 1</th>
+                        <th>MES 2</th>
+                        <th>MES 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Diagnóstico y planificación inicial</td>
+                        <td><strong>✓</strong></td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Definición de responsables y canales oficiales</td>
+                        <td><strong>✓</strong></td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Preparación de plantillas y línea gráfica</td>
+                        <td><strong>✓</strong></td>
+                        <td>Revisión</td>
+                        <td>Ajustes</td>
+                    </tr>
+                    <tr>
+                        <td>Publicaciones de productos y bebidas</td>
+                        <td><strong>✓</strong></td>
+                        <td><strong>✓</strong></td>
+                        <td><strong>✓</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Difusión de la identidad gastronómica local</td>
+                        <td><strong>✓</strong></td>
+                        <td><strong>✓</strong></td>
+                        <td><strong>✓</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Actualización de menú, precios y promociones</td>
+                        <td><strong>✓</strong></td>
+                        <td><strong>✓</strong></td>
+                        <td><strong>✓</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Atención y gestión de consultas digitales</td>
+                        <td><strong>✓</strong></td>
+                        <td><strong>✓</strong></td>
+                        <td><strong>✓</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Seguimiento de indicadores</td>
+                        <td>Registro inicial</td>
+                        <td>Evaluación</td>
+                        <td>Evaluación</td>
+                    </tr>
+                    <tr>
+                        <td>Informe de resultados y mejoras</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td><strong>✓</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 11. PRESUPUESTO REFERENCIAL -->
+    <section id="sec-11" class="section-block bg-panel-curved">
+        <div class="section-header text-center animate-on-scroll" data-animation="fade-up">
+            <span class="section-tag">INVERSIÓN ESTIMADA</span>
+            <h2 class="section-title">11. Presupuesto Referencial</h2>
+            <div class="title-underline"></div>
+        </div>
+
+        <div class="summary-card animate-on-scroll" data-animation="fade-up">
+            <p class="section-description">
+                Estimación de costos referenciales para llevar a cabo el diseño, pauta digital, impresos y material
+                gráfico.
+            </p>
+            <div class="keywords-bar">
+                <span class="kw-pill">#Presupuesto520</span>
+                <span class="kw-pill">#InversiónEnRedes</span>
+                <span class="kw-pill">#PublicidadDigital</span>
+            </div>
+        </div>
+
+        <div class="table-responsive-wrapper animate-on-scroll" data-animation="zoom-in">
+            <table class="com-data-table">
+                <thead>
+                    <tr>
+                        <th>Concepto / Actividad</th>
+                        <th>Costo Estimado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Diseño y adaptación de plantillas gráficas</td>
+                        <td><strong>S/ 120.00</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Publicidad pagada en redes sociales</td>
+                        <td><strong>S/ 180.00</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Impresión de afiches y material promocional</td>
+                        <td><strong>S/ 120.00</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Fotografía básica de productos y preparación de contenido</td>
+                        <td><strong>S/ 100.00</strong></td>
+                    </tr>
+                    <tr class="total-highlight-row">
+                        <td><strong>TOTAL REFERENCIAL ESTIMADO</strong></td>
+                        <td><strong>S/ 520.00</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 12. INDICADORES CLAVE DE EVALUACIÓN (KPIS) -->
+    <section id="sec-12" class="section-block">
+        <div class="section-header text-center animate-on-scroll" data-animation="fade-up">
+            <span class="section-tag">CONTROL Y MEDICIÓN</span>
+            <h2 class="section-title">12. Indicadores Clave de Evaluación (KPIs)</h2>
+            <div class="title-underline"></div>
+        </div>
+
+        <div class="summary-card animate-on-scroll" data-animation="fade-up">
+            <p class="section-description">
+                Indicadores y metas cuali-cuantitativas fijadas para el control de frecuencia, interacción y respuestas
+                digitales.
+            </p>
+            <div class="keywords-bar">
+                <span class="kw-pill">#KPIs</span>
+                <span class="kw-pill">#MétricasDigitales</span>
+                <span class="kw-pill">#MetasTrimestrales</span>
+            </div>
+        </div>
+
+        <div class="table-responsive-wrapper animate-on-scroll" data-animation="zoom-in">
+            <table class="com-data-table">
+                <thead>
+                    <tr>
+                        <th>Indicador</th>
+                        <th>Meta Referencial Trimestral</th>
+                        <th>Método de Verificación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Frecuencia de publicaciones</strong></td>
+                        <td>Mantener 8–12 publicaciones mensuales, ajustadas a la capacidad del negocio.</td>
+                        <td>Calendario de contenidos y registros de redes.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Interacción digital</strong></td>
+                        <td>Mejorar progresivamente las reacciones, comentarios, compartidos y consultas.</td>
+                        <td>Estadísticas de Facebook, Instagram y TikTok.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tiempo de respuesta</strong></td>
+                        <td>Responder las consultas dentro del horario de atención con la mayor rapidez posible.</td>
+                        <td>Revisión de conversaciones en WhatsApp y redes.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Difusión de productos locales</strong></td>
+                        <td>Publicar al menos una pieza semanal que destaque productos o sabores de Miski Sati.</td>
+                        <td>Registro mensual de publicaciones.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Consultas y pedidos atribuibles</strong></td>
+                        <td>Registrar la evolución mensual y comparar con el periodo anterior.</td>
+                        <td>Registro de consultas, pedidos y comentarios de clientes.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 13. PROFUNDIZACIÓN DEL MODELO DEL PROCESO CONTINUO -->
+    <section id="sec-13" class="section-block bg-panel-curved">
+        <div class="section-header text-center animate-on-scroll" data-animation="fade-up">
+            <span class="section-tag">CICLO DE MEJORA</span>
+            <h2 class="section-title">13. Profundización del Modelo del Proceso Continuo</h2>
+            <div class="title-underline"></div>
+        </div>
+
+        <div class="summary-card animate-on-scroll" data-animation="fade-up">
+            <p class="section-description">
+                Estructura metódica de 5 fases iterativas para garantizar la retroalimentación permanente de las piezas
+                difundidas.
+            </p>
+            <div class="keywords-bar">
+                <span class="kw-pill">#Diagnóstico</span>
+                <span class="kw-pill">#Estrategia</span>
+                <span class="kw-pill">#Ejecución</span>
+                <span class="kw-pill">#Control</span>
+                <span class="kw-pill">#Ajuste</span>
+            </div>
+        </div>
+
+        <div class="process-steps-grid">
+            <div class="process-step-card animate-on-scroll" data-animation="fade-up" data-delay="50">
+                <div class="step-circle">1</div>
+                <h4>Diagnóstico</h4>
+                <p>Identificar dudas frecuentes y necesidades del público.</p>
+            </div>
+            <div class="process-step-card animate-on-scroll" data-animation="fade-up" data-delay="100">
+                <div class="step-circle">2</div>
+                <h4>Estrategia</h4>
+                <p>Definir mensajes, contenidos y promociones.</p>
+            </div>
+            <div class="process-step-card animate-on-scroll" data-animation="fade-up" data-delay="150">
+                <div class="step-circle">3</div>
+                <h4>Ejecución</h4>
+                <p>Publicar y comunicar por los canales seleccionados.</p>
+            </div>
+            <div class="process-step-card animate-on-scroll" data-animation="fade-up" data-delay="200">
+                <div class="step-circle">4</div>
+                <h4>Control</h4>
+                <p>Revisar consultas, interacciones y registros.</p>
+            </div>
+            <div class="process-step-card animate-on-scroll" data-animation="fade-up" data-delay="250">
+                <div class="step-circle">5</div>
+                <h4>Ajuste</h4>
+                <p>Corregir información y mejorar contenidos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. FASES DEL MODELO APLICADAS A MISKI SATI -->
+    <section id="sec-14" class="section-block">
+        <div class="section-header text-center animate-on-scroll" data-animation="fade-up">
+            <span class="section-tag">CASO PRÁCTICO</span>
+            <h2 class="section-title">14. Fases del Modelo Aplicadas a Miski Sati</h2>
+            <div class="title-underline"></div>
+        </div>
+
+        <div class="summary-card animate-on-scroll" data-animation="fade-up">
+            <p class="section-description">
+                Mecanismos de acción prácticos aplicados a la consulta frecuente sobre ingredientes de platos
+                selváticos.
+            </p>
+            <div class="keywords-bar">
+                <span class="kw-pill">#CasoPráctico</span>
+                <span class="kw-pill">#IngredientesPlatos</span>
+                <span class="kw-pill">#AprendizajeOrganizacional</span>
+            </div>
+        </div>
+
+        <div class="table-responsive-wrapper animate-on-scroll" data-animation="zoom-in">
+            <table class="com-data-table">
+                <thead>
+                    <tr>
+                        <th>Fase del Ciclo</th>
+                        <th>Mecanismo de Acción</th>
+                        <th>Ejemplo Práctico Propuesto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1. Diagnóstico continuo</strong></td>
+                        <td>Escuchar preguntas de clientes y revisar mensajes recibidos.</td>
+                        <td>Se identifica que los clientes consultan repetidamente qué ingredientes contiene un plato
+                            selvático.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. Ajuste estratégico</strong></td>
+                        <td>Actualizar el texto o diseño de la publicación para responder las dudas.</td>
+                        <td>Se mejora la pieza gráfica y se incorpora una descripción breve y clara del plato.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. Ejecución focalizada</strong></td>
+                        <td>Publicar la versión corregida y comunicar la información al personal.</td>
+                        <td>La publicación se comparte en redes y el personal utiliza la misma información al atender.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>4. Control y medición</strong></td>
+                        <td>Revisar consultas, interacciones y comentarios de clientes.</td>
+                        <td>Se compara si disminuyen las dudas repetidas y si aumenta el interés por el plato.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>5. Aprendizaje organizacional</strong></td>
+                        <td>Registrar el cambio útil para futuras publicaciones.</td>
+                        <td>Se establece como práctica incluir nombre, descripción y precio vigente en las piezas
+                            promocionales.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 15. MECANISMO DE CONTROL Y EVALUACIÓN TRIMESTRAL -->
+    <section id="sec-15" class="section-block bg-panel-curved">
+        <div class="section-header text-center animate-on-scroll" data-animation="fade-up">
+            <span class="section-tag">CIERRE Y EVALUACIÓN</span>
+            <h2 class="section-title">15. Mecanismo de Control y Evaluación Trimestral</h2>
+            <div class="title-underline"></div>
+        </div>
+
+        <div class="summary-card animate-on-scroll" data-animation="fade-up">
+            <p class="section-description">
+                Protocolo de revisión al cierre del periodo de tres meses y recomendaciones de aplicación corporativa.
+            </p>
+            <div class="keywords-bar">
+                <span class="kw-pill">#EvaluaciónTrimestral</span>
+                <span class="kw-pill">#RegistroMensual</span>
+                <span class="kw-pill">#ConsideracionesFinales</span>
+            </div>
+        </div>
+
+        <div class="table-responsive-wrapper animate-on-scroll" data-animation="zoom-in">
+            <table class="com-data-table">
+                <thead>
+                    <tr>
+                        <th>Componente</th>
+                        <th>Detalles y Recomendaciones Clave</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Mecanismo de Control Trimestral</strong></td>
+                        <td>Al finalizar el tercer mes, el administrador o responsable designado revisará las acciones
+                            ejecutadas, los registros de publicaciones, las consultas recibidas y los indicadores
+                            disponibles. Se recomienda conservar un registro mensual con publicaciones realizadas,
+                            consultas, promociones, cambios de menú o precios y propuestas de mejora.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Consideraciones Finales</strong></td>
+                        <td>La empresa deberá confirmar el responsable de comunicación, los canales activos, el
+                            presupuesto disponible y las metas realistas. La comunicación debe mantener permanentemente
+                            el mensaje de marca <strong>“Miski Sati, esencia de nuestra selva”</strong> y el eslogan
+                            <strong>“El sabor auténtico de la selva”</strong>.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 16. MÓDULO INTERACTIVO DE CONTACTO Y RESERVAS VÍA WHATSAPP -->
+    <section id="reservas-whatsapp" class="section-block">
+        <div class="com-form-wrapper animate-on-scroll" data-animation="zoom-in">
+            <div class="com-form-header text-center">
+                <div class="wssp-icon-ring"><i class="fa-brands fa-whatsapp"></i></div>
+                <h2>Contacto & Reservas vía WhatsApp</h2>
+                <div class="title-underline"></div>
+                <p class="section-description">
+                    Envía un mensaje directo al número oficial <strong>+51 974 355 078</strong> para consultar el menú,
+                    solicitar delivery o reservar tu mesa.
+                </p>
+                <div class="keywords-bar justify-center">
+                    <span class="kw-pill">#ReservaDirecta</span>
+                    <span class="kw-pill">#WhatsAppOficial</span>
+                    <span class="kw-pill">#AtenciónSatipo</span>
+                </div>
+            </div>
+
+            <form id="wssp-form" class="com-wssp-form">
+                <div class="form-row-duo">
+                    <div class="com-form-group">
+                        <label for="wssp-nombre"><i class="fa-solid fa-user"></i> Nombre *</label>
+                        <input type="text" id="wssp-nombre" placeholder="Ej. Juan" required>
+                    </div>
+                    <div class="com-form-group">
+                        <label for="wssp-apellido"><i class="fa-solid fa-user-tag"></i> Apellido *</label>
+                        <input type="text" id="wssp-apellido" placeholder="Ej. Pérez" required>
+                    </div>
+                </div>
+
+                <div class="com-form-group">
+                    <label for="wssp-mensaje"><i class="fa-solid fa-comment-dots"></i> Consulta o Reserva *</label>
+                    <textarea id="wssp-mensaje" rows="3"
+                        placeholder="Ej. Quisiera reservar una mesa para 4 personas este sábado al mediodía."
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="com-btn-submit">
+                    <i class="fa-brands fa-whatsapp"></i> Enviar Mensaje a WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL PARA AMPLIFICAR CUALQUIER IMAGEN -->
+    <div id="com-lightbox-modal" class="com-lightbox">
+        <span class="com-close-btn">&times;</span>
+        <img class="com-lightbox-img" id="com-lightbox-src" alt="Vista Ampliada">
+        <div id="com-lightbox-caption" class="com-caption"></div>
+    </div>
+
+</div>
