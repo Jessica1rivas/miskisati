@@ -1,0 +1,21 @@
+MISKI SATI S.A.C. — SITIO WEB
+
+CONTENIDO
+- index.html: estructura y contenido de la página.
+- global.css: estilos visuales y diseño adaptable a celulares.
+- main.js: menú móvil y filtros de la carta.
+
+CÓMO PUBLICAR EN GITHUB PAGES
+1. Descarga y descomprime este ZIP.
+2. Entra a tu repositorio de GitHub.
+3. Sube index.html, global.css y main.js a la raíz del repositorio.
+4. En Settings > Pages, selecciona Deploy from a branch.
+5. Selecciona la rama main y la carpeta /(root), y guarda.
+6. Espera a que GitHub Pages publique el sitio.
+
+IMPORTANTE
+- El logotipo se carga desde el repositorio existente de MISKI SATI mediante una dirección pública de GitHub. Si cambias o eliminas ese archivo, actualiza la dirección en index.html.
+- Las fotografías son imágenes ilustrativas externas; requieren conexión a internet.
+- Los precios son REFERENCIALES, propuestos para el catálogo. No son precios confirmados por la encuesta ni por el negocio. Ajustarlos después de conocer los resultados de la encuesta y calcular los costos reales de cada preparación.
+- El sitio no inventa teléfono, horario ni redes sociales; esos datos quedan pendientes de confirmación.
+- Revisa que los nombres, ingredientes, precios y disponibilidad correspondan a la carta real antes de publicar para clientes.
