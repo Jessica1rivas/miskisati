@@ -50,6 +50,29 @@
   letter-spacing: 0.3px;
 }
 
+.identidad-marca-container .im-wide-image {
+  margin-top: 2rem;
+  background: #ffffff;
+  border: 1px solid #ece8df;
+  border-radius: 35px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+}
+
+.identidad-marca-container .im-wide-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.identidad-marca-container .im-wide-image:hover img {
+  transform: scale(1.01);
+}
+
 .identidad-marca-container .im-two-col {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
