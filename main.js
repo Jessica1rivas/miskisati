@@ -53,6 +53,21 @@ const routes = {
     css: "modules/propuestas-mejora/mejora.css",
     js: "modules/propuestas-mejora/mejora.js",
   },
+  "auditoria-imagen": {
+    html: "modules/auditoria-imagen/auditoria.html",
+    css: "modules/auditoria-imagen/auditoria.css",
+    js: "modules/auditoria-imagen/auditoria.js",
+  },
+  "analisis-imagen-publica": {
+    html: "modules/analisis-imagen-publica/analisis.html",
+    css: "modules/analisis-imagen-publica/analisis.css",
+    js: "modules/analisis-imagen-publica/analisis.js",
+  },
+  "identidad-marca": {
+    html: "modules/identidad-marca/identidad.html",
+    css: "modules/identidad-marca/identidad-marca.css",
+    js: "modules/identidad-marca/identidad-marca.js",
+  },
 };
 
 // Cargar Layout Base (Header y Footer)
@@ -79,7 +94,7 @@ async function loadLayout() {
   }
 }
 
-// Menú Off-Canvas Lateral (10 Módulos)
+// Menú Off-Canvas Lateral (13 Módulos)
 function setupOffcanvasEvents() {
   document.addEventListener("click", (e) => {
     const burgerBtn = e.target.closest("#burgerToggleBtn");
