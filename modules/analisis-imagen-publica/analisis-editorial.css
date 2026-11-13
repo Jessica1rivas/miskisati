@@ -1,0 +1,358 @@
+@import url("../auditoria-imagen/auditoria-editorial.css?v=20261113");
+
+/* ==========================================================
+   ANÁLISIS DE IMAGEN PÚBLICA - ESTILOS COMPLEMENTARIOS
+   ========================================================== */
+
+.analisis-editorial .ae-title em {
+  color: var(--ae-red);
+  font-style: italic;
+}
+
+.analisis-editorial .ae-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1.8rem;
+}
+
+.analisis-editorial .ae-kpi-card {
+  background: #ffffff;
+  border: 1px solid var(--ae-border);
+  border-radius: 24px;
+  padding: 1.3rem;
+  text-align: center;
+}
+
+.analisis-editorial .ae-kpi-card strong {
+  display: block;
+  font-family: "Georgia", serif;
+  font-size: 2rem;
+  color: var(--ae-green);
+  line-height: 1;
+}
+
+.analisis-editorial .ae-kpi-card span {
+  font-size: 0.78rem;
+  color: var(--ae-muted);
+  font-weight: 700;
+}
+
+.analisis-editorial .ae-hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.4rem;
+}
+
+.analisis-editorial .ae-simple-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 0;
+  list-style: none;
+}
+
+.analisis-editorial .ae-simple-list li {
+  font-size: 0.88rem;
+  color: #444444;
+  line-height: 1.7;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.analisis-editorial .ae-simple-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--ae-green);
+}
+
+.analisis-editorial .ae-hero-links a {
+  border: 1px solid var(--ae-border);
+  background: #ffffff;
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--ae-green);
+  transition: all 0.25s ease;
+}
+
+.analisis-editorial .ae-hero-links a:hover {
+  background: var(--ae-green);
+  color: #ffffff;
+}
+
+/* --- TABS --- */
+.analisis-editorial .ae-tabs {
+  margin-top: 1.4rem;
+}
+
+.analisis-editorial .ae-tab-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.analisis-editorial .ae-tab-btn {
+  border: 1px solid var(--ae-border);
+  background: #ffffff;
+  color: var(--ae-green);
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.analisis-editorial .ae-tab-btn.active,
+.analisis-editorial .ae-tab-btn:hover {
+  background: var(--ae-green);
+  color: #ffffff;
+  border-color: var(--ae-green);
+}
+
+.analisis-editorial .ae-tab-panel {
+  display: none;
+}
+
+.analisis-editorial .ae-tab-panel.active {
+  display: block;
+}
+
+.analisis-editorial .ae-tab-panel .ae-card {
+  margin-top: 0;
+}
+
+/* --- TABLAS --- */
+.analisis-editorial .ae-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--ae-border);
+  border-radius: 22px;
+  background: #ffffff;
+}
+
+.analisis-editorial .ae-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 520px;
+}
+
+.analisis-editorial .ae-table th {
+  background: var(--ae-green);
+  color: #ffffff;
+  text-align: left;
+  padding: 0.9rem 1rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.4px;
+}
+
+.analisis-editorial .ae-table td {
+  padding: 0.85rem 1rem;
+  font-size: 0.84rem;
+  color: #444444;
+  border-bottom: 1px solid #f1ede4;
+}
+
+.analisis-editorial .ae-table tr:last-child td {
+  border-bottom: none;
+}
+
+.analisis-editorial .ae-table tr.total td {
+  font-weight: 800;
+  color: var(--ae-green);
+  background: #f9f6f0;
+}
+
+.analisis-editorial .ae-table td:first-child {
+  font-weight: 700;
+  color: #333333;
+}
+
+.analisis-editorial .ae-table-note {
+  margin-top: 0.8rem;
+  font-size: 0.8rem;
+  color: var(--ae-muted);
+  line-height: 1.55;
+}
+
+.analisis-editorial .ae-table-note strong {
+  color: var(--ae-green);
+}
+
+/* --- RESUMEN DE ASPECTOS --- */
+.analisis-editorial .ae-summary-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.9rem;
+  margin: 1.4rem 0;
+}
+
+.analisis-editorial .ae-summary-pill {
+  background: #f4f8ec;
+  border: 1px solid #dbe9c4;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.analisis-editorial .ae-summary-pill strong {
+  display: block;
+  font-family: "Georgia", serif;
+  font-size: 1.4rem;
+  color: var(--ae-green);
+  line-height: 1;
+}
+
+.analisis-editorial .ae-summary-pill span {
+  font-size: 0.75rem;
+  color: #555555;
+  font-weight: 700;
+}
+
+/* --- PALETA COMPACTA --- */
+.analisis-editorial .ae-color-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.2rem 0;
+}
+
+.analisis-editorial .ae-color-dot {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: #ffffff;
+  border: 1px solid var(--ae-border);
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem 0.35rem 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #444444;
+}
+
+.analisis-editorial .ae-color-dot i {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  display: inline-block;
+}
+
+/* --- BARRAS DE COMUNICACIÓN --- */
+.analisis-editorial .ae-bar-row {
+  margin-bottom: 0.9rem;
+}
+
+.analisis-editorial .ae-bar-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.82rem;
+  color: #444444;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.analisis-editorial .ae-bar-track {
+  height: 10px;
+  background: #f1ede4;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.analisis-editorial .ae-bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--ae-green), var(--ae-lime));
+}
+
+/* --- PRODUCTOS --- */
+.analisis-editorial .ae-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.analisis-editorial .ae-product-card {
+  background: #ffffff;
+  border: 1px solid var(--ae-border);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.analisis-editorial .ae-product-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.analisis-editorial .ae-product-card h4 {
+  padding: 0.8rem 1rem;
+  font-size: 0.9rem;
+  color: var(--ae-green);
+}
+
+/* --- ESTRATEGIAS --- */
+.analisis-editorial .ae-strategy-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.analisis-editorial .ae-strategy-meta div {
+  background: #f9f6f0;
+  border-radius: 16px;
+  padding: 0.8rem 1rem;
+}
+
+.analisis-editorial .ae-strategy-meta span {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: var(--ae-red);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.analisis-editorial .ae-strategy-meta p {
+  font-size: 0.82rem;
+  color: #444444;
+  line-height: 1.5;
+  margin-top: 0.2rem;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 1100px) {
+  .analisis-editorial .ae-chart-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .analisis-editorial .ae-summary-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .analisis-editorial .ae-chart-grid,
+  .analisis-editorial .ae-summary-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .analisis-editorial .ae-tab-btn {
+    font-size: 0.72rem;
+    padding: 0.45rem 0.8rem;
+  }
+}
